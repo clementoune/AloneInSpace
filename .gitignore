@@ -2,13 +2,7 @@
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
-[Bb]uild/
-[Bb]uilds/
-Assets/AssetStoreTools*
-
-# Fichiers de développement
-*.pidb
-*.userprefs
+ 
 
 # Fichiers de cache
 __MACOSX/
@@ -19,33 +13,7 @@ __MACOSX/
 
 # Fichiers de build
 *.apk
-*.unitypackage
-
-# Fichiers Visual Studio
-*.csproj
-*.sln
-*.user
-*.userprefs
-*.user.*
-*.suo
-*.vs
-*.DotSettings.user
-
-# Fichiers Rider
-.idea/
-*.iml
-
-# Fichiers VS Code
-.vscode/
-
-# Fichiers de documentation
-*.pdf
-*.doc
-*.docx
-*.ppt
-*.pptx
-*.xls
-*.xlsx
+*.unitypackag
 
 # Fichiers de sauvegarde
 *.bak
