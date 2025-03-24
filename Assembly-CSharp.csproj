@@ -70,6 +70,7 @@
     <Compile Include="Assets\scriptC#\HideTitle.cs" />
     <Compile Include="Assets\scriptC#\SceneChanger.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\BezierCurve.cs" />
+    <Compile Include="Assets\scriptC#\VoiceOverManager.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\LaunchProjectile.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\HandSubsystemManager.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\DestroyObject.cs" />
