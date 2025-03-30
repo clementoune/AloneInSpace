@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\RocketAutoLaunch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scriptC#\\RocketAutoLaunch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\RocketLaunchVR.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scriptC#\\RocketLaunchVR.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\RocketLaunch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scriptC#\\RocketLaunch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\DialogueManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scriptC#\\DialogueManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -34,28 +46,61 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DialogueManager.cs",
-              "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\DialogueManager.cs",
-              "RelativeDocumentMoniker": "Assets\\scriptC#\\DialogueManager.cs",
-              "ToolTip": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\DialogueManager.cs",
-              "RelativeToolTip": "Assets\\scriptC#\\DialogueManager.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAYwBsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T18:07:04.349Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RocketAutoLaunch.cs",
+              "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\RocketAutoLaunch.cs",
+              "RelativeDocumentMoniker": "Assets\\scriptC#\\RocketAutoLaunch.cs",
+              "ToolTip": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\RocketAutoLaunch.cs",
+              "RelativeToolTip": "Assets\\scriptC#\\RocketAutoLaunch.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAYwCAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T18:00:33.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "RocketLaunchVR.cs",
+              "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\RocketLaunchVR.cs",
+              "RelativeDocumentMoniker": "Assets\\scriptC#\\RocketLaunchVR.cs",
+              "ToolTip": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\RocketLaunchVR.cs",
+              "RelativeToolTip": "Assets\\scriptC#\\RocketLaunchVR.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T17:28:05.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RocketLaunch.cs",
+              "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\RocketLaunch.cs",
+              "RelativeDocumentMoniker": "Assets\\scriptC#\\RocketLaunch.cs",
+              "ToolTip": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\RocketLaunch.cs",
+              "RelativeToolTip": "Assets\\scriptC#\\RocketLaunch.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T17:15:57.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DialogueManager.cs",
+              "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\DialogueManager.cs",
+              "RelativeDocumentMoniker": "Assets\\scriptC#\\DialogueManager.cs",
+              "ToolTip": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\DialogueManager.cs",
+              "RelativeToolTip": "Assets\\scriptC#\\DialogueManager.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T18:07:04.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "VoiceOverManager.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\VoiceOverManager.cs",
               "RelativeDocumentMoniker": "Assets\\scriptC#\\VoiceOverManager.cs",
@@ -63,12 +108,11 @@
               "RelativeToolTip": "Assets\\scriptC#\\VoiceOverManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T17:59:36.908Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T17:59:36.908Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "TitleManager.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\TitleManager.cs",
               "RelativeDocumentMoniker": "Assets\\TitleManager.cs",
@@ -79,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "HideTitle.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\HideTitle.cs",
               "RelativeDocumentMoniker": "Assets\\HideTitle.cs",
@@ -90,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "time.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\time.cs",
               "RelativeDocumentMoniker": "Assets\\time.cs",
@@ -101,7 +145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "SceneChanger.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\SceneChanger.cs",
               "RelativeDocumentMoniker": "Assets\\SceneChanger.cs",
