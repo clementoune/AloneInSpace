@@ -952,7 +952,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3250734576388154135, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: 3365049410186382223, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
       propertyPath: m_TagString
@@ -1268,7 +1268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9178654614322168129, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hand
       objectReference: {fileID: 0}
     - target: {fileID: 9178654614361751011, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
       propertyPath: m_TagString
