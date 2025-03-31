@@ -863,7 +863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1035790433963668018, guid: 085ce58b196caa446a8545c9dd388793, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.007582997
+      value: -0.006333836
       objectReference: {fileID: 0}
     - target: {fileID: 1897108578803551515, guid: 085ce58b196caa446a8545c9dd388793, type: 3}
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
@@ -2755,7 +2755,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 66a0a73bccc75d6469506989e7cd02b1, type: 3}
   m_Resource: {fileID: 8300000, guid: 66a0a73bccc75d6469506989e7cd02b1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0

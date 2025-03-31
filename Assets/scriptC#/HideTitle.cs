@@ -4,23 +4,23 @@ using TMPro;
 
 public class HideTitle : MonoBehaviour
 {
-    public TextMeshProUGUI titleText; // Référence au texte UI
+    public TextMeshPro titleText; // Référence au texte 3D
 
     void Start()
     {
         if (titleText != null)
         {
-            StartCoroutine(HideAfterSeconds(3f)); // Lance la coroutine
+            StartCoroutine(HideAfterSeconds(5f)); // Lance la coroutine
         }
         else
         {
-            Debug.LogError("⚠️ Aucun TextMeshProUGUI assigné !");
+            Debug.LogError("⚠ Aucun TextMeshPro assigné !");
         }
     }
 
     IEnumerator HideAfterSeconds(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        titleText.gameObject.SetActive(false);
+        titleText.gameObject.SetActive(false); // Cache le texte après X secondes
     }
 }
