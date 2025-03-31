@@ -886,6 +886,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Hand
       objectReference: {fileID: 0}
+    - target: {fileID: 1057781916704774922, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
+      propertyPath: m_FacingThreshold
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1093868819341218417, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
       propertyPath: m_TagString
       value: Hand

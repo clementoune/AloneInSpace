@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\Samples\\XR Interaction Toolkit\\3.0.7\\Starter Assets\\Scripts\\ControllerAnimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Samples\\XR Interaction Toolkit\\3.0.7\\Starter Assets\\Scripts\\ControllerAnimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@3c62ab08b942\\Runtime\\Interaction\\Interactors\\XRRayInteractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.xr.interaction.toolkit@3c62ab08b942\\Runtime\\Interaction\\Interactors\\XRRayInteractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\VRTemplateAssets\\Scripts\\CalloutGazeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\VRTemplateAssets\\Scripts\\CalloutGazeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\SceneChanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scriptC#\\SceneChanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -58,28 +70,65 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ControllerAnimator.cs",
+              "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\Samples\\XR Interaction Toolkit\\3.0.7\\Starter Assets\\Scripts\\ControllerAnimator.cs",
+              "RelativeDocumentMoniker": "Assets\\Samples\\XR Interaction Toolkit\\3.0.7\\Starter Assets\\Scripts\\ControllerAnimator.cs",
+              "ToolTip": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\Samples\\XR Interaction Toolkit\\3.0.7\\Starter Assets\\Scripts\\ControllerAnimator.cs",
+              "RelativeToolTip": "Assets\\Samples\\XR Interaction Toolkit\\3.0.7\\Starter Assets\\Scripts\\ControllerAnimator.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAUwE0AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T22:42:22.809Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "XRRayInteractor.cs",
+              "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@3c62ab08b942\\Runtime\\Interaction\\Interactors\\XRRayInteractor.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.xr.interaction.toolkit@3c62ab08b942\\Runtime\\Interaction\\Interactors\\XRRayInteractor.cs",
+              "ToolTip": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@3c62ab08b942\\Runtime\\Interaction\\Interactors\\XRRayInteractor.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.xr.interaction.toolkit@3c62ab08b942\\Runtime\\Interaction\\Interactors\\XRRayInteractor.cs",
+              "ViewState": "AgIAAOcJAAAAAAAAAAAUwA0LAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T22:40:52.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CalloutGazeController.cs",
+              "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\VRTemplateAssets\\Scripts\\CalloutGazeController.cs",
+              "RelativeDocumentMoniker": "Assets\\VRTemplateAssets\\Scripts\\CalloutGazeController.cs",
+              "ToolTip": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\VRTemplateAssets\\Scripts\\CalloutGazeController.cs",
+              "RelativeToolTip": "Assets\\VRTemplateAssets\\Scripts\\CalloutGazeController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAUwFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T22:38:59.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "SceneChanger.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\SceneChanger.cs",
               "RelativeDocumentMoniker": "Assets\\scriptC#\\SceneChanger.cs",
               "ToolTip": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\SceneChanger.cs",
               "RelativeToolTip": "Assets\\scriptC#\\SceneChanger.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T00:59:57.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T00:59:57.364Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "ButtonPressVR.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\ButtonPressVR.cs",
               "RelativeDocumentMoniker": "Assets\\scriptC#\\ButtonPressVR.cs",
@@ -91,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "HideTitle.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\HideTitle.cs",
               "RelativeDocumentMoniker": "Assets\\scriptC#\\HideTitle.cs",
@@ -103,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "RocketAutoLaunch.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\RocketAutoLaunch.cs",
               "RelativeDocumentMoniker": "Assets\\scriptC#\\RocketAutoLaunch.cs",
@@ -115,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "RocketLaunchVR.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\RocketLaunchVR.cs",
               "RelativeDocumentMoniker": "Assets\\scriptC#\\RocketLaunchVR.cs",
@@ -126,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "RocketLaunch.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\RocketLaunch.cs",
               "RelativeDocumentMoniker": "Assets\\scriptC#\\RocketLaunch.cs",
@@ -137,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "DialogueManager.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\DialogueManager.cs",
               "RelativeDocumentMoniker": "Assets\\scriptC#\\DialogueManager.cs",
@@ -148,7 +197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "VoiceOverManager.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\VoiceOverManager.cs",
               "RelativeDocumentMoniker": "Assets\\scriptC#\\VoiceOverManager.cs",
@@ -160,7 +209,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "TitleManager.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\TitleManager.cs",
               "RelativeDocumentMoniker": "Assets\\TitleManager.cs",
@@ -171,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "HideTitle.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\HideTitle.cs",
               "RelativeDocumentMoniker": "Assets\\HideTitle.cs",
@@ -182,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "time.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\time.cs",
               "RelativeDocumentMoniker": "Assets\\time.cs",
@@ -193,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "SceneChanger.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\SceneChanger.cs",
               "RelativeDocumentMoniker": "Assets\\SceneChanger.cs",
