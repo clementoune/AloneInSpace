@@ -1,11 +1,11 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Hand")) // Vérifie si la main touche le bouton
+        if (other.CompareTag("Hand")) // Vï¿½rifie si la main touche le bouton
         {
             LoadMainScene();
         }
@@ -13,7 +13,7 @@ public class SceneChanger : MonoBehaviour
 
     public void LoadMainScene()
     {
-        Debug.Log("Chargement de la scène main...");
-        SceneManager.LoadScene("decolage"); // Charge la scène "decolage"
+        Debug.Log("Chargement de la scï¿½ne main...");
+        SceneManager.LoadScene("decolage"); // Charge la scï¿½ne "decolage"
     }
 }

@@ -1155,7 +1155,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &1470776014
 Canvas:
   m_ObjectHideFlags: 0
@@ -1165,7 +1165,7 @@ Canvas:
   m_GameObject: {fileID: 1470776011}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1186,19 +1186,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470776011}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 382897712}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1513037557}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_SizeDelta: {x: 912.5, y: 486.25}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1513037555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1747,6 +1747,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9178654614274383201, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
       insertIndex: -1
       addedObject: {fileID: 188476776}
+    - targetCorrespondingSourceObject: {fileID: 9178654614274383201, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1470776015}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
 --- !u!4 &1513037557 stripped
@@ -1768,7 +1771,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1678668550}
-  - component: {fileID: 1678668549}
+  - component: {fileID: 1678668551}
   m_Layer: 0
   m_Name: sceneChanged2
   m_TagString: Untagged
@@ -1776,20 +1779,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1678668549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1678668548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 092828c4f15d8824b98abfb3a4b923ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeImage: {fileID: 382897713}
-  fadeDuration: 2
 --- !u!4 &1678668550
 Transform:
   m_ObjectHideFlags: 0
@@ -1805,6 +1794,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1678668551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678668548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 092828c4f15d8824b98abfb3a4b923ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeImage: {fileID: 382897713}
+  fadeDuration: 2
+  delayBeforeFadeOut: 15
 --- !u!1001 &1996190503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1883,5 +1887,4 @@ SceneRoots:
   - {fileID: 1678668550}
   - {fileID: 1513037555}
   - {fileID: 1211708337}
-  - {fileID: 1470776015}
   - {fileID: 1241701909}
