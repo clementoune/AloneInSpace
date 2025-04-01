@@ -400,8 +400,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rocketRigidbody: {fileID: 405406032}
-  launchForce: 250
-  delayBeforeLaunch: 12
+  launchForce: 200
+  delayBeforeLaunch: 13
   launchAudio: {fileID: 281012633}
   launchEffect: {fileID: 1597307240}
 --- !u!64 &405406031

@@ -5,8 +5,8 @@ public class SceneChanger2 : MonoBehaviour
 {
     void Start()
     {
-        // Appelle la fonction "ChangeScene2" après 15 secondes
-        Invoke("ChangeScene", 15f);
+        // Appelle la fonction "ChangeScene2" après 20 secondes
+        Invoke("ChangeScene", 20f);
     }
 
     void ChangeScene()
