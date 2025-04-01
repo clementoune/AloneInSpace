@@ -4,7 +4,8 @@ public class RocketAutoLaunch : MonoBehaviour
 {
     public Rigidbody rocketRigidbody;  // Assigner le Rigidbody de la fusée
     public float launchForce = 1500f;   // Force de lancement pour reculer
-    public float delayBeforeLaunch = 10f;  // Délai avant le recul (5 secondes)
+    public float delayBeforeLaunch = 15f;  // Délai avant le décollage (15 secondes dans le jeu)
+    public AudioSource launchAudio;  // Composant AudioSource pour le son de lancement
 
     void Start()
     {
@@ -14,7 +15,13 @@ public class RocketAutoLaunch : MonoBehaviour
             rocketRigidbody = GetComponent<Rigidbody>();
         }
 
-        // Geler la vitesse de la fusée pour la rendre immobile pendant 5 secondes
+        // Vérifier si l'AudioSource est bien assigné
+        if (launchAudio == null)
+        {
+            launchAudio = GetComponent<AudioSource>();
+        }
+
+        // Geler la vitesse de la fusée pour la rendre immobile pendant 15 secondes
         rocketRigidbody.linearVelocity = Vector3.zero;
         rocketRigidbody.angularVelocity = Vector3.zero;
 
@@ -24,13 +31,23 @@ public class RocketAutoLaunch : MonoBehaviour
 
     void LaunchRocket()
     {
-        Debug.Log(" Décollage... Recul !");
+        Debug.Log("Décollage... !");
+
+        // Jouer le son de lancement
+        if (launchAudio != null)
+        {
+            launchAudio.Play();
+        }
+        else
+        {
+            Debug.LogWarning("Aucun AudioSource trouvé sur l'objet de la fusée !");
+        }
 
         // Assurer que la fusée ne soit pas cinématique et prête à recevoir des forces
         rocketRigidbody.isKinematic = false;
 
-        // Appliquer une force pour reculer : on utilise -transform.forward pour obtenir la direction opposée
-        Vector3 launchDirection = transform.forward; // Reculer dans la direction opposée à l'avant de la fusée
+        // Appliquer une force pour reculer : on utilise transform.forward pour aller dans la direction avant
+        Vector3 launchDirection = transform.forward;
 
         // Appliquer la force dans cette direction pour que la fusée recule
         rocketRigidbody.AddForce(launchDirection * launchForce, ForceMode.Impulse);
