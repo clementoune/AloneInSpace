@@ -60,9 +60,8 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.42f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\MapMagic\Compatibility\MegaSplat\Editor\MegaSplatEditor.cs" />
-    <Compile Include="Assets\MapMagic\Compatibility\CTS\Editor\CTSEditor.cs" />
-    <Compile Include="Assets\MapMagic\Compatibility\RTP\Editor\RTPEditor.cs" />
+    <Compile Include="Assets\UnityTechnologies\ParticlePack\Shared\Ramps\Editor\RampAssetEditor.cs" />
+    <Compile Include="Assets\UnityTechnologies\ParticlePack\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1181,12 +1180,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Multiplayer.Center.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Multiplayer.Center.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Multiplayer.Center.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Multiplayer.Center.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
@@ -1203,6 +1202,10 @@
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
       <HintPath>Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.XR.Oculus">
+      <HintPath>Library\ScriptAssemblies\Unity.XR.Oculus.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.XR.OpenXR.Features.OculusQuestSupport.Editor">
@@ -1305,6 +1308,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.Features.MetaQuestSupport.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.XR.Oculus.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.XR.Oculus.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
       <Private>False</Private>
@@ -1375,14 +1382,6 @@
       <Project>{AA5A9FA7-A34B-CABD-9A62-EAFF6F94BC6A}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets</Name>
     </ProjectReference>
-    <ProjectReference Include="MapMagic.Editor.csproj">
-      <Project>{E9C7DAF8-1224-BB34-112F-9B22B1D60C06}</Project>
-      <Name>MapMagic.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="MapMagic.csproj">
-      <Project>{119D4063-FB1D-AC6D-A6C0-804C9622E6D9}</Project>
-      <Name>MapMagic</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.XR.Hands.Samples.VisualizerSample.csproj">
       <Project>{3EBFF303-05BB-AD8D-C07F-26EA8B50E317}</Project>
       <Name>Unity.XR.Hands.Samples.VisualizerSample</Name>
@@ -1391,10 +1390,6 @@
       <Project>{C0B8AACE-6A5A-EC31-0BFE-9CB11949B50D}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator</Name>
     </ProjectReference>
-    <ProjectReference Include="Den.Tools.csproj">
-      <Project>{7DD4EAED-83D2-366C-C8D2-234C7BA2A61E}</Project>
-      <Name>Den.Tools</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.csproj">
       <Project>{37311953-541B-5863-0FAF-4B6B453BC849}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor</Name>
@@ -1402,10 +1397,6 @@
     <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.Hands.csproj">
       <Project>{B792D93F-242D-5145-D4CF-5BAF40AFB6BA}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.Hands</Name>
-    </ProjectReference>
-    <ProjectReference Include="Den.Tools.Editor.csproj">
-      <Project>{EB47F724-B73E-78A6-0202-14BB5607560D}</Project>
-      <Name>Den.Tools.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
