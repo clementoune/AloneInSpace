@@ -14,6 +14,6 @@ public class SceneChanger : MonoBehaviour
     public void LoadMainScene()
     {
         Debug.Log("Chargement de la scène main...");
-        SceneManager.LoadScene("main"); // Charge la scène "decolage"
+        SceneManager.LoadScene("decolage"); // Charge la scène "decolage"
     }
 }
