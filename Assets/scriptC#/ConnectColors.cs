@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections.Generic;
 
 public class ConnectColorsVR : MonoBehaviour
 {
@@ -14,19 +14,27 @@ public class ConnectColorsVR : MonoBehaviour
     public Transform violet1;
     public Transform violet2;
 
+    // Nouvelle variable pour stocker les informations de connexion
+    private Dictionary<Color, (Transform start, Transform end)> connections = new Dictionary<Color, (Transform start, Transform end)>();
+
     void Start()
     {
-        Connect(jaune1, jaune2);
-        Connect(vert1, vert2);
-        Connect(rouge1, rouge2);
-        Connect(bleu1, bleu2);
-        Connect(violet1, violet2);
+        // Stocke les informations de connexion
+        connections[jaune1.GetComponent<MeshRenderer>().material.color] = (jaune1, jaune2);
+        connections[vert1.GetComponent<MeshRenderer>().material.color] = (vert1, vert2);
+        connections[rouge1.GetComponent<MeshRenderer>().material.color] = (rouge1, rouge2);
+        connections[bleu1.GetComponent<MeshRenderer>().material.color] = (bleu1, bleu2);
+        connections[violet1.GetComponent<MeshRenderer>().material.color] = (violet1, violet2);
     }
 
-    void Connect(Transform startPoint, Transform endPoint)
+    // Fonction pour créer un câble à la demande
+    public void CreateCable(Transform startPoint)
     {
+        // Récupère les informations de connexion
+        (Transform start, Transform end) = connections[startPoint.GetComponent<MeshRenderer>().material.color];
+
         // Crée un objet pour le câble
-        GameObject cable = new GameObject("Cable_" + startPoint.name + "_" + endPoint.name);
+        GameObject cable = new GameObject("Cable_" + start.name + "_" + end.name);
         cable.transform.parent = transform;
 
         // Ajoute le composant LineRenderer
@@ -34,11 +42,11 @@ public class ConnectColorsVR : MonoBehaviour
         lineRenderer.positionCount = 2;
 
         // Définit les points de départ et d'arrivée
-        lineRenderer.SetPosition(0, startPoint.position);
-        lineRenderer.SetPosition(1, endPoint.position);
+        lineRenderer.SetPosition(0, start.position);
+        lineRenderer.SetPosition(1, start.position); // Le câble commence au point de départ
 
         // Applique un matériau de la même couleur que les points de connexion
-        Material cableMaterial = startPoint.GetComponent<MeshRenderer>().material;
+        Material cableMaterial = start.GetComponent<MeshRenderer>().material;
         lineRenderer.material = cableMaterial;
 
         // Ajoute le composant XRGrabInteractable pour permettre la saisie du câble
@@ -46,8 +54,8 @@ public class ConnectColorsVR : MonoBehaviour
 
         // Ajoute le script CableConnectionVR pour gérer la connexion
         CableConnectionVR connectionScript = cable.AddComponent<CableConnectionVR>();
-        connectionScript.startPoint = startPoint;
-        connectionScript.endPoint = endPoint;
+        connectionScript.startPoint = start;
+        connectionScript.endPoint = end;
         connectionScript.cableMaterial = cableMaterial;
     }
 }

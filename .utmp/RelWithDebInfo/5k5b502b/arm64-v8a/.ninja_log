@@ -1,10 +1,10 @@
 # ninja log v5
-55	3709	7651626712820743	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	d4db99d4eb56cc0e
-70	3733	7651626713043485	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	7ab5cee9d61f00eb
-13	3767	7651626713505308	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	b8a154f423e58f5d
-109	3781	7651626713590989	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	845fc2b2c152c46a
-27	3929	7651626715114134	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	3cb9022decfa6fe9
-88	3942	7651626715225935	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	df30be9e0c06e1cf
-40	4348	7651626719367526	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	edc9d5efd6a66bd
-1	4546	7651626721287611	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	26be85f2a56685f5
-4546	4826	7651626724149775	C:/Documents/cour IUT/BUT2/S4/realite_virtuelle_et_environnements_immersifs/AloneInSpace/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5k5b502b/obj/arm64-v8a/libgame.so	5c838dfdcdc4b2a7
+39	3147	7653297994557997	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	7ab5cee9d61f00eb
+27	3189	7653297994930046	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	d4db99d4eb56cc0e
+70	3226	7653297995362338	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	845fc2b2c152c46a
+19	3232	7653297995508001	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	b8a154f423e58f5d
+1	3333	7653297996511022	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	3cb9022decfa6fe9
+60	3373	7653297996862843	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	df30be9e0c06e1cf
+48	3672	7653297999943177	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	edc9d5efd6a66bd
+11	3812	7653298001302350	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	26be85f2a56685f5
+3812	3987	7653298003174249	C:/Documents/cour IUT/BUT2/S4/realite_virtuelle_et_environnements_immersifs/AloneInSpace/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5k5b502b/obj/arm64-v8a/libgame.so	5c838dfdcdc4b2a7
