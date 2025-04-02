@@ -6,28 +6,34 @@ public class CableConnectionVR : MonoBehaviour
     public Transform startPoint;
     public Transform endPoint;
     public Material cableMaterial;
+    public float snapDistance = 0.2f;
 
     private bool isConnected = false;
+    private LineRenderer lineRenderer;
 
     void Start()
     {
+        lineRenderer = GetComponent<LineRenderer>();
         GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().selectExited.AddListener(OnCableReleased);
     }
 
     void OnCableReleased(SelectExitEventArgs args)
     {
-        // Le câble est relâché par le joueur
-        CheckConnection();
+        ConnectCable();
     }
 
-    void CheckConnection()
+    void ConnectCable()
     {
-        // Vérifie si le câble est connecté aux bons points de connexion
-        if (Vector3.Distance(transform.position, endPoint.position) < 0.1f &&
-            GetComponent<LineRenderer>().material == cableMaterial)
+        if (Vector3.Distance(transform.position, endPoint.position) < snapDistance &&
+            lineRenderer.material == cableMaterial &&
+            endPoint.GetComponent<MeshRenderer>().material == cableMaterial)
         {
             isConnected = true;
-            // Effets visuels et sonores de connexion réussie
+            Debug.Log("Câble connecté !");
+        }
+        else
+        {
+            Debug.Log("Mauvaise connexion !");
         }
     }
 
@@ -35,9 +41,7 @@ public class CableConnectionVR : MonoBehaviour
     {
         if (!isConnected)
         {
-            // Met à jour la position du câble
-            GetComponent<LineRenderer>().SetPosition(0, startPoint.position);
-            GetComponent<LineRenderer>().SetPosition(1, transform.position);
+            lineRenderer.SetPosition(1, transform.position); // Met à jour l'extrémité du câble
         }
     }
 }
