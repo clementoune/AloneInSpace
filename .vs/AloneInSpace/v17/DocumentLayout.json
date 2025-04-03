@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\CableConnectionVR.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scriptC#\\CableConnectionVR.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\CableController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scriptC#\\CableController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\ConnectColors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scriptC#\\ConnectColors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\VoiceOverManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scriptC#\\VoiceOverManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -70,15 +82,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CableConnectionVR.cs",
+              "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\CableConnectionVR.cs",
+              "RelativeDocumentMoniker": "Assets\\scriptC#\\CableConnectionVR.cs",
+              "ToolTip": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\CableConnectionVR.cs",
+              "RelativeToolTip": "Assets\\scriptC#\\CableConnectionVR.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T00:33:35.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ConnectColors.cs",
+              "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\ConnectColors.cs",
+              "RelativeDocumentMoniker": "Assets\\scriptC#\\ConnectColors.cs",
+              "ToolTip": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\ConnectColors.cs*",
+              "RelativeToolTip": "Assets\\scriptC#\\ConnectColors.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T00:32:03.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CableController.cs",
+              "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\CableController.cs",
+              "RelativeDocumentMoniker": "Assets\\scriptC#\\CableController.cs",
+              "ToolTip": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\CableController.cs",
+              "RelativeToolTip": "Assets\\scriptC#\\CableController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T00:13:32.573Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "HideTitle.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\HideTitle.cs",
               "RelativeDocumentMoniker": "Assets\\scriptC#\\HideTitle.cs",
@@ -90,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "SceneChanged2.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\SceneChanged2.cs",
               "RelativeDocumentMoniker": "Assets\\scriptC#\\SceneChanged2.cs",
@@ -102,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "ControllerAnimator.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\Samples\\XR Interaction Toolkit\\3.0.7\\Starter Assets\\Scripts\\ControllerAnimator.cs",
               "RelativeDocumentMoniker": "Assets\\Samples\\XR Interaction Toolkit\\3.0.7\\Starter Assets\\Scripts\\ControllerAnimator.cs",
@@ -114,20 +165,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "VoiceOverManager.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\VoiceOverManager.cs",
               "RelativeDocumentMoniker": "Assets\\scriptC#\\VoiceOverManager.cs",
               "ToolTip": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\VoiceOverManager.cs",
               "RelativeToolTip": "Assets\\scriptC#\\VoiceOverManager.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T17:59:36.908Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "SceneChanger.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\SceneChanger.cs",
               "RelativeDocumentMoniker": "Assets\\scriptC#\\SceneChanger.cs",
@@ -139,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "CalloutGazeController.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\VRTemplateAssets\\Scripts\\CalloutGazeController.cs",
               "RelativeDocumentMoniker": "Assets\\VRTemplateAssets\\Scripts\\CalloutGazeController.cs",
@@ -151,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "SceneChanged3.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\SceneChanged3.cs",
               "RelativeDocumentMoniker": "Assets\\scriptC#\\SceneChanged3.cs",
@@ -163,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "ButtonPressVR.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\ButtonPressVR.cs",
               "RelativeDocumentMoniker": "Assets\\scriptC#\\ButtonPressVR.cs",
@@ -175,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "RocketLaunchVR.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\RocketLaunchVR.cs",
               "RelativeDocumentMoniker": "Assets\\scriptC#\\RocketLaunchVR.cs",
@@ -186,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "RocketLaunch.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\RocketLaunch.cs",
               "RelativeDocumentMoniker": "Assets\\scriptC#\\RocketLaunch.cs",
@@ -197,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "DialogueManager.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\DialogueManager.cs",
               "RelativeDocumentMoniker": "Assets\\scriptC#\\DialogueManager.cs",
@@ -208,7 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "TitleManager.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\TitleManager.cs",
               "RelativeDocumentMoniker": "Assets\\TitleManager.cs",
@@ -219,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "HideTitle.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\HideTitle.cs",
               "RelativeDocumentMoniker": "Assets\\HideTitle.cs",
@@ -230,7 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "time.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\time.cs",
               "RelativeDocumentMoniker": "Assets\\time.cs",
@@ -241,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "SceneChanger.cs",
               "DocumentMoniker": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\SceneChanger.cs",
               "RelativeDocumentMoniker": "Assets\\SceneChanger.cs",

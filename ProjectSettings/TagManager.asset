@@ -6,6 +6,16 @@ TagManager:
   tags:
   - Anchor
   - Hand
+  - CableRouge
+  - CableBleu
+  - CableVert
+  - CableViolet
+  - CableJaune
+  - socketRouge
+  - socketBleu
+  - socketVert
+  - socketViolet
+  - socketJaune
   layers:
   - Default
   - TransparentFX

@@ -1,47 +1,48 @@
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+  // Si tu utilises l'XR Interaction Toolkit
 
 public class CableConnectionVR : MonoBehaviour
 {
-    public Transform startPoint;
-    public Transform endPoint;
-    public Material cableMaterial;
-    public float snapDistance = 0.2f;
+    private bool isHeld = false;
+    private string correctTag;  // Le tag du bon connecteur
 
-    private bool isConnected = false;
-    private LineRenderer lineRenderer;
-
-    void Start()
+    private void Start()
     {
-        lineRenderer = GetComponent<LineRenderer>();
-        GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().selectExited.AddListener(OnCableReleased);
+        // Le câble doit avoir le même tag que le connecteur correct
+        correctTag = gameObject.tag;
     }
 
-    void OnCableReleased(SelectExitEventArgs args)
+    private void OnTriggerEnter(Collider other)
     {
-        ConnectCable();
-    }
-
-    void ConnectCable()
-    {
-        if (Vector3.Distance(transform.position, endPoint.position) < snapDistance &&
-            lineRenderer.material == cableMaterial &&
-            endPoint.GetComponent<MeshRenderer>().material == cableMaterial)
+        if (!isHeld && other.CompareTag(correctTag))
         {
-            isConnected = true;
-            Debug.Log("Câble connecté !");
-        }
-        else
-        {
-            Debug.Log("Mauvaise connexion !");
+            Debug.Log("Bonne connexion !");
+            AttachToConnector(other.transform);
         }
     }
 
-    void Update()
+    private void AttachToConnector(Transform connector)
     {
-        if (!isConnected)
-        {
-            lineRenderer.SetPosition(1, transform.position); // Met à jour l'extrémité du câble
-        }
+        // Fixe la position du câble sur le connecteur
+        transform.position = connector.position;
+        transform.rotation = connector.rotation;
+
+        // Désactive les interactions
+        GetComponent<Rigidbody>().isKinematic = true;
+        GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().enabled = false;
+
+        // Effet visuel / son
+        GetComponent<Renderer>().material.color = Color.green;  // Change la couleur du câble
+    }
+
+    // XR Interaction : Détecte si le joueur tient le câble
+    public void OnSelectEnter()
+    {
+        isHeld = true;
+    }
+
+    public void OnSelectExit()
+    {
+        isHeld = false;
     }
 }
