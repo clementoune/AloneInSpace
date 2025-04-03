@@ -1,38 +1,61 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class EquiperCasqueVR : MonoBehaviour
 {
-    public Transform pointAttach; // Référence à la tête du joueur
-    public AudioSource equipSound; // Son à jouer lors de l'équipement du casque
-
+    public Transform pointAttach; // Tête du joueur
+    public Transform socleCasque; // Socle où replacer le casque
+    public AudioSource sonCasqueEquipe; // Son lorsqu'on met le casque
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
     private bool estEquipe = false;
 
     private void Start()
     {
-        // Récupérer le XRGrabInteractable et lui assigner une fonction lors du drop
         grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
-        grabInteractable.selectExited.AddListener(EquiperCasque);
+        if (grabInteractable != null)
+        {
+            grabInteractable.selectExited.AddListener(EquiperCasqueSurTete);
+        }
+        else
+        {
+            Debug.LogError("⚠️ XRGrabInteractable manquant sur le casque !");
+        }
     }
 
-    private void EquiperCasque(SelectExitEventArgs args)
+    private void EquiperCasqueSurTete(SelectExitEventArgs args)
     {
         if (!estEquipe)
         {
-            transform.SetParent(pointAttach); // Attacher le casque à la tête
-            transform.localPosition = Vector3.zero; // Aligner la position
-            transform.localRotation = Quaternion.identity; // Aligner la rotation
+            Debug.Log("🎧 Casque équipé !");
+            transform.SetParent(pointAttach);
+            transform.localPosition = Vector3.zero;
+            transform.localRotation = Quaternion.identity;
             estEquipe = true;
-
-            // Jouer le son si une source audio est assignée
-            if (equipSound != null)
-            {
-                equipSound.Play();
-            }
-
-            // Désactiver le grab pour éviter de retirer le casque
             grabInteractable.enabled = false;
+
+            if (sonCasqueEquipe != null)
+            {
+                sonCasqueEquipe.Play();
+            }
+        }
+    }
+
+    public void RepositionnerCasque()
+    {
+        Debug.Log("🔄 Tentative de repositionnement du casque...");
+
+        if (estEquipe)
+        {
+            Debug.Log("📌 Casque repositionné sur le socle !");
+            estEquipe = false;
+            transform.SetParent(null);
+            transform.position = socleCasque.position;
+            transform.rotation = socleCasque.rotation;
+            grabInteractable.enabled = true;
+        }
+        else
+        {
+            Debug.Log("⚠️ Le casque n'était pas équipé, repositionnement inutile.");
         }
     }
 }
