@@ -5,11 +5,12 @@ using System.Collections;
 public class VoiceOverManager : MonoBehaviour
 {
     public AudioSource audioSource;
-    public TextMeshProUGUI dialogueText; // Texte affiché à l'écran
-    public string message = "Bienvenue à bord du vaisseau F2-33 ! Je suis votre intelligence artificielle de bord, conçu pour vous assister dans cette mission d'exploration du système solaire.\r\n\r\nVotre vaisseau, une navette de classe Stellarion, est équipé des dernières technologies pour analyser les planètes et leurs mystères.\r\n\r\nPour commencer, explorez votre environnement. Déplacez-vous dans la navette et retrouvez votre tableau de bord au centre du vaisseau afin d’accéder aux commandes principales.\r\n\r\nBonne mission, Capitaine."; // Texte à afficher
-    public float delayBeforeStart = 2f; // Délai avant de commencer
-    public float displayDuration = 10f; // Durée d'affichage par groupe de mots (augmente pour ralentir)
-    public int wordsPerChunk = 5; // Nombre de mots affichés à la fois
+    public TextMeshProUGUI dialogueText;
+    public string message = "Bienvenue à bord du vaisseau F2-33 ! Je suis votre intelligence artificielle de bord, conçu pour vous assister dans cette mission d'exploration du système solaire.\r\n\r\nVotre vaisseau, une navette de classe Stellarion, est équipé des dernières technologies pour analyser les planètes et leurs mystères.\r\n\r\nPour commencer, explorez votre environnement. Déplacez-vous dans la navette et retrouvez votre tableau de bord au centre du vaisseau afin d’accéder aux commandes principales.\r\n\r\nBonne mission, Capitaine.";
+    public float delayBeforeStart = 2f;
+    public float displayDuration = 10f;
+    public int wordsPerChunk = 5;
+    public float fadeOutDuration = 2f; // Durée du fondu de sortie
 
     void Start()
     {
@@ -20,20 +21,44 @@ public class VoiceOverManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delayBeforeStart);
 
-        string[] words = message.Split(' '); // Découpe le message en mots
-        dialogueText.text = ""; // Efface le texte avant l'affichage
+        if (audioSource.clip == null)
+        {
+            Debug.LogWarning("Aucun clip audio assigné à AudioSource !");
+            yield break;
+        }
+
+        string[] words = message.Split(' ');
+        dialogueText.text = "";
         dialogueText.gameObject.SetActive(true);
         audioSource.Play();
 
         for (int i = 0; i < words.Length; i += wordsPerChunk)
         {
-            string chunk = string.Join(" ", words, i, Mathf.Min(wordsPerChunk, words.Length - i)); // Sélectionne 5 mots à afficher
-            dialogueText.text = chunk; // Affiche les mots actuels
-            yield return new WaitForSeconds(displayDuration); // Attente avant d'afficher les suivants
+            string chunk = string.Join(" ", words, i, Mathf.Min(wordsPerChunk, words.Length - i));
+            dialogueText.text = chunk;
+            yield return new WaitForSeconds(displayDuration);
         }
 
-        yield return new WaitForSeconds(audioSource.clip.length - displayDuration); // Attend la fin du son s'il est plus long
+        yield return new WaitForSeconds(audioSource.clip.length - displayDuration);
 
-        dialogueText.gameObject.SetActive(false); // Cacher le texte après la lecture
+        // Début du fondu de sortie
+        yield return StartCoroutine(FadeOutText());
+    }
+
+    IEnumerator FadeOutText()
+    {
+        float elapsedTime = 0f;
+        Color textColor = dialogueText.color;
+
+        while (elapsedTime < fadeOutDuration)
+        {
+            textColor.a = Mathf.Lerp(1f, 0f, elapsedTime / fadeOutDuration);
+            dialogueText.color = textColor;
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        dialogueText.gameObject.SetActive(false);
+        dialogueText.color = new Color(textColor.r, textColor.g, textColor.b, 1f); // Réinitialiser la transparence
     }
 }
