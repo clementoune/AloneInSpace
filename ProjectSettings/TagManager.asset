@@ -17,6 +17,7 @@ TagManager:
   - socketViolet
   - socketJaune
   - ZoneDeDeplacementExterieur
+  - ZoneDeDeplacementInterieur
   layers:
   - Default
   - TransparentFX
