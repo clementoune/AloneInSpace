@@ -1,18 +1,22 @@
 ﻿using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using System.Collections;
 
 public class SocleCasque : MonoBehaviour
 {
     public EquiperCasqueVR casque; // Référence au casque
+    public AudioSource audioSource; // Référence au son à jouer
+
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
+    private Vector3 initialPosition; // Position de base du bouton
 
     private void Start()
     {
         grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
+        initialPosition = transform.localPosition;
 
         if (grabInteractable != null)
         {
-            // Ajouter l'écouteur d'événements de sélection (quand l'utilisateur interagit avec le bouton)
             grabInteractable.selectEntered.AddListener(OnButtonPressed);
             grabInteractable.hoverEntered.AddListener(OnHoverEntered);
         }
@@ -22,10 +26,24 @@ public class SocleCasque : MonoBehaviour
         }
     }
 
-    // Cette méthode est appelée quand le cube (le bouton) est pressé
     private void OnButtonPressed(SelectEnterEventArgs args)
     {
         Debug.Log("🟢 Bouton Pressé, repositionnement du casque...");
+
+        // 🔊 Lancer le son si la source audio est définie
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning("🔇 Aucun AudioSource assigné !");
+        }
+
+        // ▶️ Animation d'appui physique du bouton
+        StartCoroutine(AnimateButtonPress());
+
+        // Repositionner le casque si la référence existe
         if (casque != null)
         {
             casque.RepositionnerCasque();
@@ -36,9 +54,17 @@ public class SocleCasque : MonoBehaviour
         }
     }
 
-    // Cette méthode est appelée lorsqu'un objet entre en "hover" avec le cube (affichage visuel pour le survol)
     private void OnHoverEntered(HoverEnterEventArgs args)
     {
         Debug.Log("🛑 Le joueur survole le cube.");
+    }
+
+    private IEnumerator AnimateButtonPress()
+    {
+        // Descendre le bouton
+        transform.localPosition += new Vector3(0, -0.01f, 0);
+        yield return new WaitForSeconds(0.2f); // Durée de l'appui
+        // Revenir à la position initiale
+        transform.localPosition = initialPosition;
     }
 }
