@@ -90,8 +90,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -100,7 +104,7 @@
               "RelativeDocumentMoniker": "Assets\\scriptC#\\SocleCasque.cs",
               "ToolTip": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\SocleCasque.cs",
               "RelativeToolTip": "Assets\\scriptC#\\SocleCasque.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAUwEAAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T18:31:39.841Z",
               "EditorCaption": ""
@@ -113,7 +117,7 @@
               "RelativeDocumentMoniker": "Assets\\scriptC#\\EquiperCasqueVR.cs",
               "ToolTip": "C:\\Documents\\cour IUT\\BUT2\\S4\\realite_virtuelle_et_environnements_immersifs\\AloneInSpace\\Assets\\scriptC#\\EquiperCasqueVR.cs",
               "RelativeToolTip": "Assets\\scriptC#\\EquiperCasqueVR.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwD4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T14:39:13.068Z",
               "EditorCaption": ""
@@ -128,8 +132,7 @@
               "RelativeToolTip": "Assets\\scriptC#\\CableConnectionVR.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T00:33:35.332Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T00:33:35.332Z"
             },
             {
               "$type": "Document",
@@ -153,12 +156,7 @@
               "RelativeToolTip": "Assets\\scriptC#\\VoiceOverManager.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAuwDEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T17:59:36.908Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "WhenOpened": "2025-03-24T17:59:36.908Z"
             },
             {
               "$type": "Document",

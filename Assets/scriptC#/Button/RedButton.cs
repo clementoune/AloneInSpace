@@ -1,11 +1,12 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using System.Collections;
 
-public class SocleCasque : MonoBehaviour
+public class RedButton : MonoBehaviour
 {
-    public EquiperCasqueVR casque; // Référence au casque
-    public AudioSource audioSource; // Référence au son à jouer
+    public AudioSource soundbutton;
+    public AudioSource audioSource2;
+    public GameObject canvas;
 
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
     private Vector3 initialPosition; // Position de base du bouton
@@ -24,6 +25,12 @@ public class SocleCasque : MonoBehaviour
         {
             Debug.LogError("⚠️ XRGrabInteractable manquant sur le cube !");
         }
+
+        // Assurez-vous que le canvas est désactivé au départ
+        if (canvas != null)
+        {
+            canvas.SetActive(false);
+        }
     }
 
     private void OnButtonPressed(SelectEnterEventArgs args)
@@ -31,32 +38,33 @@ public class SocleCasque : MonoBehaviour
         Debug.Log("🟢 Bouton Pressé, repositionnement du casque...");
 
         // 🔊 Lancer le son si la source audio est définie
-        if (audioSource != null)
+        if (soundbutton != null)
         {
-            audioSource.Play();
+            soundbutton.Play();
         }
         else
         {
-            Debug.LogWarning("🔇 Aucun AudioSource assigné !");
+            Debug.LogWarning("🔇 Aucun sondbutton assigné !");
+        }
+
+        // 🔊 Lancer le son si la source audio est définie
+        if (audioSource2 != null)
+        {
+            audioSource2.Play();
+        }
+        else
+        {
+            Debug.LogWarning("🔇 Aucun audioSource2 assigné !");
+        }
+
+        // Afficher le canvas
+        if (canvas != null)
+        {
+            canvas.SetActive(true);
         }
 
         // ▶️ Animation d'appui physique du bouton
         StartCoroutine(AnimateButtonPress());
-
-        // Repositionner le casque si la référence existe
-        if (casque != null)
-        {
-            casque.RepositionnerCasque();
-        }
-        else
-        {
-            Debug.LogError("❌ Aucun casque assigné dans l'inspecteur !");
-        }
-    }
-
-    private void OnHoverEntered(HoverEnterEventArgs args)
-    {
-        Debug.Log("🛑 Le joueur survole le cube.");
     }
 
     private IEnumerator AnimateButtonPress()
@@ -66,5 +74,11 @@ public class SocleCasque : MonoBehaviour
         yield return new WaitForSeconds(0.2f); // Durée de l'appui
         // Revenir à la position initiale
         transform.localPosition = initialPosition;
+    }
+
+    private void OnHoverEntered(HoverEnterEventArgs args)
+    {
+        // Vous pouvez ajouter des effets de survol ici
+        Debug.Log("🟡 Hover sur le bouton !");
     }
 }
