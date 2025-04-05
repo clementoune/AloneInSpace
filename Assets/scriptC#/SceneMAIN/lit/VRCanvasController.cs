@@ -1,18 +1,21 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI; // Namespace pour Image
+using TMPro; // Namespace pour TextMeshPro
 using UnityEngine.XR.Interaction.Toolkit; // Assurez-vous d'inclure ce namespace pour XR interaction
 using System.Collections;
 
 public class VRCanvasController : MonoBehaviour
 {
     public Image fadeImage; // Image noire pour l'effet de fondu
+    public TextMeshProUGUI messageText; // Texte MeshPro invisible à afficher pendant le fondu
     public float fadeDuration = 2f; // Durée du fondu
     public float darkDuration = 3f; // Durée pendant laquelle le Canvas reste sombre
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable interactable; // Référence à l'objet interactable
 
     void Start()
     {
-        interactable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>(); // Récupère la référence à l'XRGrabInteractable
+        // Récupère la référence à l'XRGrabInteractable
+        interactable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
         if (interactable != null)
         {
             interactable.selectEntered.AddListener(OnGrab); // Ajoute un écouteur pour l'événement selectEntered
@@ -22,6 +25,9 @@ public class VRCanvasController : MonoBehaviour
         {
             Debug.LogError("L'objet ne possède pas de XRGrabInteractable.");
         }
+
+        // Cache le texte au début
+        messageText.gameObject.SetActive(false);
     }
 
     // Fonction appelée lors de l'interaction de l'objet
@@ -46,9 +52,16 @@ public class VRCanvasController : MonoBehaviour
             yield return null;
         }
 
-        // Phase 2: Attendre 3 secondes avec l'écran sombre
+        // Affiche le texte lorsque l'écran devient sombre
+        messageText.gameObject.SetActive(true);
+        messageText.text = "Jour 2"; // Changez le texte si nécessaire
         Debug.Log("Canvas sombre pendant 3 secondes.");
+
+        // Attendre 3 secondes avec l'écran sombre
         yield return new WaitForSeconds(darkDuration);
+
+        // Cache le texte après 3 secondes
+        messageText.gameObject.SetActive(false);
 
         // Phase 3: Fondu vers la transparence (2 secondes)
         elapsedTime = 0f;
