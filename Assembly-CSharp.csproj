@@ -67,6 +67,7 @@
     <Compile Include="Assets\VRTemplateAssets\Scripts\BooleanToggleVisualsController.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\RayAttachModifier.cs" />
     <Compile Include="Assets\scriptC#\SceneMAIN\Cables\GestionDeplacementSpatial.cs" />
+    <Compile Include="Assets\scriptC#\SceneMAIN\levier\LevierScript.cs" />
     <Compile Include="Assets\scriptC#\SceneDEBUT\portal\ButtonPressVR.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\XRPokeFollowAffordanceFill.cs" />
     <Compile Include="Assets\UnityTechnologies\ParticlePack\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
