@@ -8,7 +8,8 @@ public class VoiceOverManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
 
     [TextArea(5, 10)]
-    public string message = "Bienvenue à bord du vaisseau F2-33 ! Je suis votre intelligence artificielle de bord, conçu pour vous assister dans cette mission d'exploration du système solaire.\r\n\r\nVotre vaisseau, une navette de classe Stellarion, est équipé des dernières technologies pour analyser les planètes et leurs mystères.\r\n\r\nPour commencer, explorez votre environnement. Déplacez-vous dans la navette et retrouvez votre tableau de bord au centre du vaisseau afin d’accéder aux commandes principales.\r\n\r\nBonne mission, Capitaine.";
+    public string message = "SystÃ¨me IA ActivÃ©... Bienvenue Ã  bord du vaisseau F2-33 ! Je suis votre intelligence artificielle de bord. Vous Ãªtes dans une navette de classe Stellarion pour analyser les planÃ¨tes et leurs mystÃ¨res. Pour dÃ©buter, Appuyer sur le bouton rouge pour commencer vos mission quotidienne.";
+
 
     public float delayBeforeStart = 2f;
     public int wordsPerChunk = 5;
@@ -25,7 +26,7 @@ public class VoiceOverManager : MonoBehaviour
 
         if (audioSource.clip == null)
         {
-            Debug.LogWarning("Aucun clip audio assigné à AudioSource !");
+            Debug.LogWarning("Aucun clip audio assignï¿½ ï¿½ AudioSource !");
             yield break;
         }
 
@@ -46,7 +47,7 @@ public class VoiceOverManager : MonoBehaviour
             yield return new WaitForSeconds(timeBetweenChunks);
         }
 
-        // Attente restante si l'affichage s'est terminé avant la fin du clip
+        // Attente restante si l'affichage s'est terminï¿½ avant la fin du clip
         float remainingTime = audioSource.clip.length - (timeBetweenChunks * totalChunks);
         if (remainingTime > 0)
             yield return new WaitForSeconds(remainingTime);
@@ -68,7 +69,7 @@ public class VoiceOverManager : MonoBehaviour
             yield return null;
         }
 
-        // Réinitialiser
+        // Rï¿½initialiser
         dialogueText.gameObject.SetActive(false);
         dialogueText.color = new Color(originalColor.r, originalColor.g, originalColor.b, 1f);
     }

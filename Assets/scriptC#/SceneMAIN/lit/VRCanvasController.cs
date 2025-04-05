@@ -10,6 +10,10 @@ public class VRCanvasController : MonoBehaviour
     public TextMeshProUGUI messageText; // Texte MeshPro invisible à afficher pendant le fondu
     public float fadeDuration = 2f; // Durée du fondu
     public float darkDuration = 3f; // Durée pendant laquelle le Canvas reste sombre
+    public AudioSource pasPret; 
+    public AudioSource audioSource; // Référence à l'AudioSource pour jouer le son
+    public RedButton redButton; // Référence au bouton rouge
+
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable interactable; // Référence à l'objet interactable
 
     void Start()
@@ -33,8 +37,15 @@ public class VRCanvasController : MonoBehaviour
     // Fonction appelée lors de l'interaction de l'objet
     void OnGrab(SelectEnterEventArgs args)
     {
+        if(redButton != null && !redButton.isPressed)
+        {
+            pasPret.Play(); 
+            Debug.Log("🔴 Le bouton rouge n'est pas encore pressé !");
+            return; // Ne pas continuer si le bouton rouge n'est pas pressé
+        }
         Debug.Log("Objet attrapé !"); // Message de débogage pour vérifier si l'événement est bien déclenché
         // Démarre le fondu et fait l'effet sombre pendant 3 secondes
+        audioSource.Play(); 
         StartCoroutine(FadeToDark());
     }
 

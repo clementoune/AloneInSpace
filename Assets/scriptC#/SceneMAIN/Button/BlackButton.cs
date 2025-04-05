@@ -6,6 +6,7 @@ public class BlackButton : MonoBehaviour
 {
     public EquiperCasqueVR casque; // Référence au casque
     public AudioSource audioSource; // Référence au son à jouer
+    public RedButton redButton; // Référence au bouton rouge
 
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
     private Vector3 initialPosition; // Position de base du bouton
@@ -14,7 +15,7 @@ public class BlackButton : MonoBehaviour
     {
         grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
         initialPosition = transform.localPosition;
-
+        DesactiverBouton();
         if (grabInteractable != null)
         {
             grabInteractable.selectEntered.AddListener(OnButtonPressed);
@@ -66,5 +67,29 @@ public class BlackButton : MonoBehaviour
         yield return new WaitForSeconds(0.2f); // Durée de l'appui
         // Revenir à la position initiale
         transform.localPosition = initialPosition;
+    }
+    public void DesactiverBouton()
+    {
+        if (grabInteractable != null)
+        {
+            grabInteractable.enabled = false;
+            Debug.Log("⚫ Bouton noir désactivé !");
+        }
+        else
+        {
+            Debug.LogError("⚠️ XRGrabInteractable manquant, impossible de désactiver le bouton !");
+        }
+    }
+    public void ReactiverBouton()
+    {
+        if (grabInteractable != null)
+        {
+            grabInteractable.enabled = true;
+            Debug.Log("⚫ Bouton noir réactivé !");
+        }
+        else
+        {
+            Debug.LogError("⚠️ XRGrabInteractable manquant, impossible de réactiver le bouton !");
+        }
     }
 }

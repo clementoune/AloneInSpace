@@ -7,9 +7,12 @@ public class RedButton : MonoBehaviour
     public AudioSource soundbutton;
     public AudioSource audioSource2;
     public GameObject canvas;
+    public EquiperCasqueVR casqueVRSCRIPT;
+    public BlackButton blackButton; // Référence au bouton noir
+    public bool isPressed = false; 
 
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
-    private Vector3 initialPosition; // Position de base du bouton
+    private Vector3 initialPosition; 
 
     private void Start()
     {
@@ -35,6 +38,7 @@ public class RedButton : MonoBehaviour
 
     private void OnButtonPressed(SelectEnterEventArgs args)
     {
+        isPressed = true;
         Debug.Log("🟢 Bouton Pressé, repositionnement du casque...");
 
         // 🔊 Lancer le son si la source audio est définie
@@ -62,8 +66,7 @@ public class RedButton : MonoBehaviour
         {
             canvas.SetActive(true);
         }
-
-        // ▶️ Animation d'appui physique du bouton
+        blackButton.ReactiverBouton(); 
         StartCoroutine(AnimateButtonPress());
     }
 
