@@ -75,6 +75,7 @@
     <Compile Include="Assets\scriptC#\SceneMAIN\Button\RedButton.cs" />
     <Compile Include="Assets\scriptC#\SceneDECOLLAGE\decollage\RocketAutoLaunch.cs" />
     <Compile Include="Assets\scriptC#\SceneDEBUT\AloneInSpace-titre\HideTitle.cs" />
+    <Compile Include="Assets\scriptC#\SceneMAIN\lit\VRCanvasController.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\BezierCurve.cs" />
     <Compile Include="Assets\UnityTechnologies\ParticlePack\Shared\Scripts\ProximityActivate.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\LaunchProjectile.cs" />
