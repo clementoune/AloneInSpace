@@ -786,7 +786,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Equiper le casque
+  m_text: '
 
 '
   m_isRightToLeft: 0
@@ -1018,6 +1018,34 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4cabba7ce55961146a05ad42b04c1231, type: 2}
+    - target: {fileID: 6940490042702293500, guid: dbd4e3348f44f1c4c9439d43d1d36a31, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999943
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940490042702293500, guid: dbd4e3348f44f1c4c9439d43d1d36a31, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0033935602
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940490042702293500, guid: dbd4e3348f44f1c4c9439d43d1d36a31, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00016025877
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940490042702293500, guid: dbd4e3348f44f1c4c9439d43d1d36a31, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0000223398
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940490042702293500, guid: dbd4e3348f44f1c4c9439d43d1d36a31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.389
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940490042702293500, guid: dbd4e3348f44f1c4c9439d43d1d36a31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.018
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940490042702293500, guid: dbd4e3348f44f1c4c9439d43d1d36a31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.002
+      objectReference: {fileID: 0}
     - target: {fileID: 9205116859530448493, guid: dbd4e3348f44f1c4c9439d43d1d36a31, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1251,7 +1279,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ffda5dd6a0de4904eb047ea866979185, type: 3}
   m_Resource: {fileID: 8300000, guid: ffda5dd6a0de4904eb047ea866979185, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1634,7 +1662,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Activer pilote \nautomatique "
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4bba1cc31b6b6eb4e9d10f7b0a8eabe0, type: 2}
   m_sharedMaterial: {fileID: 596900707383443916, guid: 4bba1cc31b6b6eb4e9d10f7b0a8eabe0, type: 2}
@@ -4357,7 +4385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointAttach: {fileID: 1263019584}
-  socleCasque: {fileID: 0}
+  socleCasque: {fileID: 1417868005}
   sonCasqueEquipe: {fileID: 736382208}
   redButton: {fileID: 1733491740}
   VoixTrigger: {fileID: 1342505430}
@@ -6559,11 +6587,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monCheckMark1: {fileID: 56151161}
-  monCheckMark2: {fileID: 56151161}
+  monCheckMark2: {fileID: 1773385414}
   monCheckMark3: {fileID: 164441563}
   scriptCasqueVR: {fileID: 736382210}
   scriptLevier: {fileID: 81887502}
   terminer: {fileID: 1318414768}
+  cycleJourNuit: {fileID: 1659920410}
+  texteCheckMark1: {fileID: 56151159}
+  texteCheckMark2: {fileID: 1773385412}
+  texteCheckMark3: {fileID: 164441561}
+  missionsJour1:
+  - {fileID: 56151159}
+  - {fileID: 1773385412}
+  - {fileID: 164441561}
+  missionsJour2:
+  - {fileID: 56151159}
+  - {fileID: 1773385412}
+  - {fileID: 164441561}
 --- !u!82 &1318414768
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6824,8 +6864,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f0e08c7684e6f1947a6867c16608ee04, type: 3}
-  m_Resource: {fileID: 8300000, guid: f0e08c7684e6f1947a6867c16608ee04, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e772f67b26f9b834ea8fa5f67af1454b, type: 3}
+  m_Resource: {fileID: 8300000, guid: e772f67b26f9b834ea8fa5f67af1454b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -7460,6 +7500,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1417868004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1417868005}
+  m_Layer: 0
+  m_Name: position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1417868005
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417868004}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.55637383, y: -0.428068, z: -0.58340615, w: -0.40846437}
+  m_LocalPosition: {x: 0.384, y: 1.657, z: 2.171}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2073992743}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1430872788
 GameObject:
   m_ObjectHideFlags: 0
@@ -9412,7 +9483,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Retirer le casque
+  m_text: '
 
 '
   m_isRightToLeft: 0
@@ -12244,6 +12315,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 505226701}
+  - {fileID: 1417868005}
   - {fileID: 736382204}
   - {fileID: 701743599}
   - {fileID: 1739520897}

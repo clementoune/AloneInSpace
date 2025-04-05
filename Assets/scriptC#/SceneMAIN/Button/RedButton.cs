@@ -9,14 +9,14 @@ public class RedButton : MonoBehaviour
     public GameObject canvas;
     public EquiperCasqueVR casqueVRSCRIPT;
     public BlackButton blackButton; // Référence au bouton noir
-    public bool isPressed = false; 
+    public bool isPressed = false;
 
-    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
-    private Vector3 initialPosition; 
+    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable; // Changed the type
+    private Vector3 initialPosition;
 
     private void Start()
     {
-        grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
+        grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>(); // Corrected this line
         initialPosition = transform.localPosition;
 
         if (grabInteractable != null)
@@ -39,9 +39,7 @@ public class RedButton : MonoBehaviour
     private void OnButtonPressed(SelectEnterEventArgs args)
     {
         isPressed = true;
-        Debug.Log("🟢 Bouton Pressé, repositionnement du casque...");
-
-        // 🔊 Lancer le son si la source audio est définie
+        setGrabbable(false);        
         if (soundbutton != null)
         {
             soundbutton.Play();
@@ -66,7 +64,8 @@ public class RedButton : MonoBehaviour
         {
             canvas.SetActive(true);
         }
-        blackButton.ReactiverBouton(); 
+        blackButton.setGrabbable(true);
+        casqueVRSCRIPT.setGrabbable(true);
         StartCoroutine(AnimateButtonPress());
     }
 
@@ -77,6 +76,18 @@ public class RedButton : MonoBehaviour
         yield return new WaitForSeconds(0.2f); // Durée de l'appui
         // Revenir à la position initiale
         transform.localPosition = initialPosition;
+    }
+    public void setGrabbable(bool grabbable)
+    {
+        if (grabInteractable != null)
+        {
+            grabInteractable.enabled = grabbable;  // Assurez-vous que grabbable est un booléen
+            Debug.Log(grabbable ? "🔵 est maintenant attrapable." : "🔴 Le casque n'est plus attrapable.");
+        }
+        else
+        {
+            Debug.LogError("⚠️ XRGrabInteractable manquant sur l'objet !");
+        }
     }
 
     private void OnHoverEntered(HoverEnterEventArgs args)

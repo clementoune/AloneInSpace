@@ -6,6 +6,7 @@ using System.Collections;
 
 public class VRCanvasController : MonoBehaviour
 {
+    public static int numjours = 1; // Nombre de jours
     public Image fadeImage; // Image noire pour l'effet de fondu
     public TextMeshProUGUI messageText; // Texte MeshPro invisible à afficher pendant le fondu
     public float fadeDuration = 2f; // Durée du fondu
@@ -37,17 +38,26 @@ public class VRCanvasController : MonoBehaviour
     // Fonction appelée lors de l'interaction de l'objet
     void OnGrab(SelectEnterEventArgs args)
     {
-        if(redButton != null && !redButton.isPressed)
+        
+
+        if (!CheckMissions.finishedday)
         {
-            pasPret.Play(); 
-            Debug.Log("🔴 Le bouton rouge n'est pas encore pressé !");
-            return; // Ne pas continuer si le bouton rouge n'est pas pressé
+            Debug.Log("🚫 La journée n'est pas encore terminée !");
+            pasPret.Play(); // jouer un son indiquant qu'on ne peut pas encore dormir
+            return;
         }
-        Debug.Log("Objet attrapé !"); // Message de débogage pour vérifier si l'événement est bien déclenché
-        // Démarre le fondu et fait l'effet sombre pendant 3 secondes
+
+        Debug.Log("✅ La journée est terminée, on peut aller se coucher !");
         audioSource.Play(); 
+        redButton.setGrabbable(true);
         StartCoroutine(FadeToDark());
+        Debug.Log("Nombre de jours : " + numjours);
+        // Réinitialisation de la journée
+        CheckMissions.finishedday = false;
+        FindFirstObjectByType<CheckMissions>().ResetMissionState();
+
     }
+
 
     // Coroutine qui gère l'effet de fondu à l'état sombre
     IEnumerator FadeToDark()
@@ -62,10 +72,10 @@ public class VRCanvasController : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-
+        numjours++;
         // Affiche le texte lorsque l'écran devient sombre
         messageText.gameObject.SetActive(true);
-        messageText.text = "Jour 2"; // Changez le texte si nécessaire
+        messageText.text = "Jour "+numjours; // Changez le texte si nécessaire
         Debug.Log("Canvas sombre pendant 3 secondes.");
 
         // Attendre 3 secondes avec l'écran sombre

@@ -15,7 +15,7 @@ public class BlackButton : MonoBehaviour
     {
         grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
         initialPosition = transform.localPosition;
-        DesactiverBouton();
+        setGrabbable(false);  
         if (grabInteractable != null)
         {
             grabInteractable.selectEntered.AddListener(OnButtonPressed);
@@ -29,7 +29,19 @@ public class BlackButton : MonoBehaviour
 
     private void OnButtonPressed(SelectEnterEventArgs args)
     {
-        Debug.Log("🟢 Bouton Pressé, repositionnement du casque...");
+        Debug.Log("🟢 Bouton Pressé");
+
+        // Vérifier si le casque est déjà équipé avant de procéder
+        if (!casque.AEteEquipe)
+        {
+            Debug.Log("⚠️ Le casque n'est pas encore équipé !");
+            // Optionnellement, jouer un son d'avertissement si défini
+            if (audioSource != null)
+            {
+                audioSource.Play();
+            }
+            return; // Ne pas continuer si le casque n'est pas équipé
+        }
 
         // 🔊 Lancer le son si la source audio est définie
         if (audioSource != null)
@@ -40,6 +52,7 @@ public class BlackButton : MonoBehaviour
         {
             Debug.LogWarning("🔇 Aucun AudioSource assigné !");
         }
+        
 
         // ▶️ Animation d'appui physique du bouton
         StartCoroutine(AnimateButtonPress());
@@ -68,28 +81,17 @@ public class BlackButton : MonoBehaviour
         // Revenir à la position initiale
         transform.localPosition = initialPosition;
     }
-    public void DesactiverBouton()
+
+    public void setGrabbable(bool grabbable)
     {
         if (grabInteractable != null)
         {
-            grabInteractable.enabled = false;
-            Debug.Log("⚫ Bouton noir désactivé !");
+            grabInteractable.enabled = grabbable;  // Assurez-vous que grabbable est un booléen
+            Debug.Log(grabbable ? "🔵 Le casque est maintenant attrapable." : "🔴 Le casque n'est plus attrapable.");
         }
         else
         {
-            Debug.LogError("⚠️ XRGrabInteractable manquant, impossible de désactiver le bouton !");
-        }
-    }
-    public void ReactiverBouton()
-    {
-        if (grabInteractable != null)
-        {
-            grabInteractable.enabled = true;
-            Debug.Log("⚫ Bouton noir réactivé !");
-        }
-        else
-        {
-            Debug.LogError("⚠️ XRGrabInteractable manquant, impossible de réactiver le bouton !");
+            Debug.LogError("⚠️ XRGrabInteractable manquant sur l'objet !");
         }
     }
 }

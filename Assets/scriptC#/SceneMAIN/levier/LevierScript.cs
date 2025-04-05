@@ -61,6 +61,7 @@ public class LevierScript : MonoBehaviour
 
         // Commencer à déplacer le vaisseau
         isMoving = true;
+        Debug.Log("etat du vaisseau : " + estActiver);
     }
 
     private void OnHoverEntered(HoverEnterEventArgs args)
