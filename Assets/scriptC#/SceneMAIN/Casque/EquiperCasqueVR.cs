@@ -8,6 +8,7 @@ public class EquiperCasqueVR : MonoBehaviour
     public AudioSource sonCasqueEquipe; // Son lorsqu'on met le casque
     public RedButton redButton; // Référence au script RedButton
     public AudioSource VoixTrigger;
+    public CheckMissions  scriptCheckMissions; // Référence au script CheckMissions
 
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
     private bool estEquipe = false;
@@ -20,7 +21,7 @@ public class EquiperCasqueVR : MonoBehaviour
     private void Start()
     {
         grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
-        setGrabbable(false);  // Désactiver le grab interactable au départ
+        //setGrabbable(false);  // Désactiver le grab interactable au départ
         
         if (grabInteractable != null)
         {
@@ -37,6 +38,7 @@ public class EquiperCasqueVR : MonoBehaviour
         if (redButton != null && !redButton.isPressed)
         {
             VoixTrigger.Play();
+            RepositionnerCasqueError();
             Debug.Log("🔊 Voix déclenchée !");
             return;
         }
@@ -56,6 +58,7 @@ public class EquiperCasqueVR : MonoBehaviour
                 sonCasqueEquipe.Play();
             }
             Debug.Log("etat du casque : " + AEteEquipe);
+            scriptCheckMissions.ValiderMissions(); // Appel de la méthode pour valider les missions
         }
     }
 
@@ -73,11 +76,20 @@ public class EquiperCasqueVR : MonoBehaviour
             transform.rotation = socleCasque.rotation;
             grabInteractable.enabled = true;  // Réactive le grab interactable
             Debug.Log("🔄 Le casque a été reposé !");
+            scriptCheckMissions.ValiderMissions(); // Appel de la méthode pour valider les missions
+
         }
         else
         {
             Debug.Log("⚠️ Le casque n'était pas équipé, repositionnement inutile.");
         }
+    }
+
+    public void RepositionnerCasqueError()
+    {
+        transform.SetParent(null);
+        transform.position = socleCasque.position;
+        transform.rotation = socleCasque.rotation;
     }
 
     public void setGrabbable(bool grabbable)

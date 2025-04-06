@@ -9,7 +9,7 @@ public class LevierScript : MonoBehaviour
     public float moveSpeed = 3f;    // Vitesse de déplacement
     public RedButton redButton; // Référence au script RedButton
     public AudioSource VoixTrigger;
-
+    public CheckMissions scriptCheckMissions; // Référence au script CheckMissions
 
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
     private bool isMoving = false;  // Détermine si le vaisseau doit bouger ou non
@@ -62,6 +62,8 @@ public class LevierScript : MonoBehaviour
         // Commencer à déplacer le vaisseau
         isMoving = true;
         Debug.Log("etat du vaisseau : " + estActiver);
+        scriptCheckMissions.ValiderMissions(); // Appel de la méthode pour valider les missions
+
     }
 
     private void OnHoverEntered(HoverEnterEventArgs args)

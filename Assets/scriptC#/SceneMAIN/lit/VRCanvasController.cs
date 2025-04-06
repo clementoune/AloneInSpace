@@ -1,29 +1,33 @@
 using UnityEngine;
-using UnityEngine.UI; // Namespace pour Image
-using TMPro; // Namespace pour TextMeshPro
-using UnityEngine.XR.Interaction.Toolkit; // Assurez-vous d'inclure ce namespace pour XR interaction
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.XR.Interaction.Toolkit;
 using System.Collections;
+using System.Collections.Generic;
 
 public class VRCanvasController : MonoBehaviour
 {
-    public static int numjours = 1; // Nombre de jours
-    public Image fadeImage; // Image noire pour l'effet de fondu
-    public TextMeshProUGUI messageText; // Texte MeshPro invisible à afficher pendant le fondu
-    public float fadeDuration = 2f; // Durée du fondu
-    public float darkDuration = 3f; // Durée pendant laquelle le Canvas reste sombre
-    public AudioSource pasPret; 
-    public AudioSource audioSource; // Référence à l'AudioSource pour jouer le son
-    public RedButton redButton; // Référence au bouton rouge
+    public static int numjours = 1;
+    public Image fadeImage;
+    public TextMeshProUGUI messageText;
+    public float fadeDuration = 2f;
+    public float darkDuration = 3f;
+    public AudioSource pasPret;
+    public AudioSource audioSource;
+    public AudioSource alarmAudioSource; // 🔊 Alarme
+    public List<Light> alarmLights; // 💡 Lumières rouges d'alarme
+    public RedButton redButton;
 
-    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable interactable; // Référence à l'objet interactable
+    private Coroutine alarmCoroutine;
+
+    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable interactable;
 
     void Start()
     {
-        // Récupère la référence à l'XRGrabInteractable
         interactable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
         if (interactable != null)
         {
-            interactable.selectEntered.AddListener(OnGrab); // Ajoute un écouteur pour l'événement selectEntered
+            interactable.selectEntered.AddListener(OnGrab);
             Debug.Log("Listener ajouté à l'objet interactable.");
         }
         else
@@ -31,60 +35,52 @@ public class VRCanvasController : MonoBehaviour
             Debug.LogError("L'objet ne possède pas de XRGrabInteractable.");
         }
 
-        // Cache le texte au début
         messageText.gameObject.SetActive(false);
+
+        // Assurez-vous que les lumières d'alarme sont éteintes au début
+        foreach (Light light in alarmLights)
+        {
+            light.enabled = false;
+        }
     }
 
-    // Fonction appelée lors de l'interaction de l'objet
     void OnGrab(SelectEnterEventArgs args)
     {
-        
-
         if (!CheckMissions.finishedday)
         {
             Debug.Log("🚫 La journée n'est pas encore terminée !");
-            pasPret.Play(); // jouer un son indiquant qu'on ne peut pas encore dormir
+            pasPret.Play();
             return;
         }
 
         Debug.Log("✅ La journée est terminée, on peut aller se coucher !");
-        audioSource.Play(); 
+        audioSource.Play();
         redButton.setGrabbable(true);
         StartCoroutine(FadeToDark());
         Debug.Log("Nombre de jours : " + numjours);
-        // Réinitialisation de la journée
+
         CheckMissions.finishedday = false;
         FindFirstObjectByType<CheckMissions>().ResetMissionState();
-
     }
 
-
-    // Coroutine qui gère l'effet de fondu à l'état sombre
     IEnumerator FadeToDark()
     {
-        Debug.Log("Début du fondu vers le sombre.");
-        // Phase 1: Transition vers le fondu sombre (3 secondes)
         float elapsedTime = 0f;
         while (elapsedTime < darkDuration)
         {
-            float alpha = Mathf.Lerp(0f, 1f, elapsedTime / darkDuration); // Lerp pour faire un fondu
+            float alpha = Mathf.Lerp(0f, 1f, elapsedTime / darkDuration);
             fadeImage.color = new Color(0, 0, 0, alpha);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+
         numjours++;
-        // Affiche le texte lorsque l'écran devient sombre
         messageText.gameObject.SetActive(true);
-        messageText.text = "Jour "+numjours; // Changez le texte si nécessaire
-        Debug.Log("Canvas sombre pendant 3 secondes.");
+        messageText.text = "Jour " + numjours;
 
-        // Attendre 3 secondes avec l'écran sombre
         yield return new WaitForSeconds(darkDuration);
-
-        // Cache le texte après 3 secondes
         messageText.gameObject.SetActive(false);
 
-        // Phase 3: Fondu vers la transparence (2 secondes)
         elapsedTime = 0f;
         while (elapsedTime < fadeDuration)
         {
@@ -93,6 +89,45 @@ public class VRCanvasController : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        Debug.Log("Fondu terminé.");
+
+        StartAlarm(); // 🚨 Lancer l'alarme après le réveil
+    }
+
+    private void StartAlarm()
+    {
+        Debug.Log("🚨 Alarme déclenchée !");
+        if (alarmAudioSource != null)
+            alarmAudioSource.Play();
+
+        if (alarmCoroutine != null)
+            StopCoroutine(alarmCoroutine);
+
+        alarmCoroutine = StartCoroutine(FlashAlarmLights());
+    }
+
+    public void StopAlarm()
+    {
+        Debug.Log("🟢 Alarme arrêtée.");
+        if (alarmAudioSource != null)
+            alarmAudioSource.Stop();
+
+        if (alarmCoroutine != null)
+            StopCoroutine(alarmCoroutine);
+
+        foreach (Light light in alarmLights)
+        {
+            light.enabled = false;
+        }
+    }
+
+    private IEnumerator FlashAlarmLights()
+    {
+        while (true)
+        {
+            foreach (Light light in alarmLights)
+                light.enabled = !light.enabled;
+
+            yield return new WaitForSeconds(0.5f); // vitesse de clignotement
+        }
     }
 }

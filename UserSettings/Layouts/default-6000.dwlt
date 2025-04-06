@@ -323,7 +323,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 725.19995, y: 424.2}
+  m_TargetSize: {x: 906.49994, y: 530.25}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -338,10 +338,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -290.08
-    m_HBaseRangeMax: 290.08
-    m_VBaseRangeMin: -169.68001
-    m_VBaseRangeMax: 169.68001
+    m_HBaseRangeMin: -362.59998
+    m_HBaseRangeMax: 362.59998
+    m_VBaseRangeMin: -212.1
+    m_VBaseRangeMax: 212.1
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -943,7 +943,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 55.95293, y: 494.2166, z: -788.11487}
+    m_Target: {x: 54.643715, y: 493.3053, z: -789.19293}
     speed: 2
     m_Value: {x: 55.95293, y: 494.2166, z: -788.11487}
   m_RenderMode: 0
@@ -991,11 +991,11 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.16400544, y: 0.6971227, z: -0.16884999, w: -0.6773221}
+    m_Target: {x: -0.00404339, y: 0.73785156, z: -0.0044343392, w: -0.6750574}
     speed: 2
     m_Value: {x: -0.16400544, y: 0.6971227, z: -0.16884999, w: -0.67732203}
   m_Size:
-    m_Target: 0.32651913
+    m_Target: 0.69466984
     speed: 2
     m_Value: 0.32651913
   m_Ortho:
@@ -1097,7 +1097,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 294.8}
     m_SelectedIDs: b8a30000
     m_LastClickedID: 41912
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 000000004cc30000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1126,7 +1126,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 000000004cc30000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

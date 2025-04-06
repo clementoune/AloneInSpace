@@ -5,8 +5,10 @@ using System.Collections;
 public class GreenButton : MonoBehaviour
 {
     public AudioSource soundbutton;
+    public VRCanvasController canvasController; // 🔗 Référence vers le script VRCanvasController
+
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
-    private Vector3 initialPosition; // Position de base du bouton
+    private Vector3 initialPosition;
 
     private void Start()
     {
@@ -20,41 +22,41 @@ public class GreenButton : MonoBehaviour
         }
         else
         {
-            Debug.LogError("⚠️ XRGrabInteractable manquant sur le cube !");
+            Debug.LogError("⚠️ XRGrabInteractable manquant sur le bouton !");
         }
-
     }
 
     private void OnButtonPressed(SelectEnterEventArgs args)
     {
-        Debug.Log("🟢 Bouton Pressé, repositionnement du casque...");
+        Debug.Log("🟢 Bouton Pressé, arrêt de l'alarme...");
 
-        // 🔊 Lancer le son si la source audio est définie
         if (soundbutton != null)
         {
             soundbutton.Play();
         }
+
+        // 🛑 Appeler StopAlarm si le canvasController est bien défini
+        if (canvasController != null)
+        {
+            canvasController.StopAlarm();
+        }
         else
         {
-            Debug.LogWarning("🔇 Aucun sondbutton assigné !");
+            Debug.LogWarning("❌ Aucun VRCanvasController assigné !");
         }
 
-        // ▶️ Animation d'appui physique du bouton
         StartCoroutine(AnimateButtonPress());
     }
 
     private IEnumerator AnimateButtonPress()
     {
-        // Descendre le bouton
         transform.localPosition += new Vector3(0, -0.01f, 0);
-        yield return new WaitForSeconds(0.2f); // Durée de l'appui
-        // Revenir à la position initiale
+        yield return new WaitForSeconds(0.2f);
         transform.localPosition = initialPosition;
     }
 
     private void OnHoverEntered(HoverEnterEventArgs args)
     {
-        // Vous pouvez ajouter des effets de survol ici
         Debug.Log("🟡 Hover sur le bouton !");
     }
 }
