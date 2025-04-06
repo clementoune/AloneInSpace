@@ -6,15 +6,15 @@ using System.Collections;
 public class SceneChanged3 : MonoBehaviour
 {
     public Image fadeImage; // Image noire pour l'effet de fondu
-    public float fadeDuration = 2f; // Durée du fondu
-    public float delayBeforeFadeOut = 15f; // Temps avant le début du fondu
+    public float fadeDuration = 2f; // Durï¿½e du fondu
+    public float delayBeforeFadeOut = 15f; // Temps avant le dï¿½but du fondu
 
     void Start()
     {
-        // Démarre avec un fondu d'ouverture
+        // Dï¿½marre avec un fondu d'ouverture
         StartCoroutine(FadeIn());
 
-        // Lance le fondu de sortie après 15 secondes
+        // Lance le fondu de sortie aprï¿½s 15 secondes
         Invoke("StartFadeOut", delayBeforeFadeOut);
     }
 
@@ -44,7 +44,7 @@ public class SceneChanged3 : MonoBehaviour
             yield return null;
         }
 
-        // Change de scène après le fondu
-        SceneManager.LoadScene("main");
+        // Change de scï¿½ne aprï¿½s le fondu
+        SceneManager.LoadScene("jour1");
     }
 }
