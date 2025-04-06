@@ -15,11 +15,7 @@ public class VRCanvasController2 : MonoBehaviour
     public float darkDuration = 3f;
     public AudioSource pasPret;
     public AudioSource audioSource;
-    public AudioSource alarmAudioSource; // 🔊 Alarme
-    public List<Light> alarmLights; // 💡 Lumières rouges d'alarme
     public RedButton2 redButton;
-
-    private Coroutine alarmCoroutine;
 
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable interactable;
 
@@ -37,12 +33,6 @@ public class VRCanvasController2 : MonoBehaviour
         }
 
         messageText.gameObject.SetActive(false);
-
-        // Assurez-vous que les lumières d'alarme sont éteintes au début
-        foreach (Light light in alarmLights)
-        {
-            light.enabled = false;
-        }
     }
 
     void OnGrab(SelectEnterEventArgs args)

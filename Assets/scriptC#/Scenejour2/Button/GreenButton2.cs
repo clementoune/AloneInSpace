@@ -8,6 +8,8 @@ public class GreenButton2 : MonoBehaviour
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
     private Vector3 initialPosition; // Position de base du bouton
 
+    public AlarmSystem alarmSystem; // Référence au script de l'alarme
+
     private void Start()
     {
         grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
@@ -27,7 +29,13 @@ public class GreenButton2 : MonoBehaviour
 
     private void OnButtonPressed(SelectEnterEventArgs args)
     {
-        Debug.Log("🟢 Bouton Pressé, repositionnement du casque...");
+        Debug.Log("🟢 Bouton Pressé, arrêt de l'alarme et des lumières...");
+
+        // Arrêter l'alarme et réinitialiser les lumières
+        if (alarmSystem != null)
+        {
+            alarmSystem.StopAlarm();
+        }
 
         // 🔊 Lancer le son si la source audio est définie
         if (soundbutton != null)
