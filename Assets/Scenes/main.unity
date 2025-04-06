@@ -3016,7 +3016,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 5d96161761f1c024d9e3bb9967ac7aa7, type: 3}
   m_Resource: {fileID: 8300000, guid: 5d96161761f1c024d9e3bb9967ac7aa7, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.498
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4586,7 +4586,7 @@ Light:
   m_GameObject: {fileID: 820403770}
   m_Enabled: 1
   serializedVersion: 11
-  m_Type: 0
+  m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
@@ -4692,7 +4692,7 @@ Light:
   m_GameObject: {fileID: 827061411}
   m_Enabled: 1
   serializedVersion: 11
-  m_Type: 0
+  m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
@@ -5444,7 +5444,7 @@ Light:
   m_GameObject: {fileID: 1005588046}
   m_Enabled: 1
   serializedVersion: 11
-  m_Type: 0
+  m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
@@ -8297,7 +8297,7 @@ Light:
   m_GameObject: {fileID: 1564545301}
   m_Enabled: 1
   serializedVersion: 11
-  m_Type: 0
+  m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
@@ -10193,7 +10193,7 @@ Light:
   m_GameObject: {fileID: 1869931941}
   m_Enabled: 1
   serializedVersion: 11
-  m_Type: 0
+  m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
@@ -13157,6 +13157,7 @@ MonoBehaviour:
   casque: {fileID: 736382210}
   audioSource: {fileID: 2082845085}
   redButton: {fileID: 1733491740}
+  VoixTrigger: {fileID: 1342505430}
 --- !u!65 &2082845081
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -38,8 +38,7 @@ public class RedButton : MonoBehaviour
 
     private void OnButtonPressed(SelectEnterEventArgs args)
     {
-        isPressed = true;
-        setGrabbable(false);        
+        isPressed = true;        
         if (soundbutton != null)
         {
             soundbutton.Play();
@@ -64,8 +63,6 @@ public class RedButton : MonoBehaviour
         {
             canvas.SetActive(true);
         }
-        blackButton.setGrabbable(true);
-        casqueVRSCRIPT.setGrabbable(true);
         StartCoroutine(AnimateButtonPress());
     }
 

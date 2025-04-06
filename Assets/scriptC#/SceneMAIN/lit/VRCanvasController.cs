@@ -93,9 +93,16 @@ public class VRCanvasController : MonoBehaviour
         StartAlarm(); // 🚨 Lancer l'alarme après le réveil
     }
 
-    private void StartAlarm()
+     private void StartAlarm()
     {
         Debug.Log("🚨 Alarme déclenchée !");
+        
+        foreach (Light light in alarmLights)
+        {
+            light.color = Color.red; // 🔴 Lumière rouge
+            light.enabled = true;
+        }
+
         if (alarmAudioSource != null)
             alarmAudioSource.Play();
 
@@ -105,9 +112,10 @@ public class VRCanvasController : MonoBehaviour
         alarmCoroutine = StartCoroutine(FlashAlarmLights());
     }
 
-    public void StopAlarm()
+     public void StopAlarm()
     {
         Debug.Log("🟢 Alarme arrêtée.");
+
         if (alarmAudioSource != null)
             alarmAudioSource.Stop();
 
@@ -117,6 +125,7 @@ public class VRCanvasController : MonoBehaviour
         foreach (Light light in alarmLights)
         {
             light.enabled = false;
+            light.color = Color.white; // ⚪ Retour à la lumière blanche
         }
     }
 

@@ -91,17 +91,4 @@ public class EquiperCasqueVR : MonoBehaviour
         transform.position = socleCasque.position;
         transform.rotation = socleCasque.rotation;
     }
-
-    public void setGrabbable(bool grabbable)
-    {
-        if (grabInteractable != null)
-        {
-            grabInteractable.enabled = grabbable;  // Assurez-vous que grabbable est un booléen
-            Debug.Log(grabbable ? "🔵 Le casque est maintenant attrapable." : "🔴 Le casque n'est plus attrapable.");
-        }
-        else
-        {
-            Debug.LogError("⚠️ XRGrabInteractable manquant sur l'objet !");
-        }
-    }
 }

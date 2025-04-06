@@ -101,8 +101,9 @@ public class CheckMissions : MonoBehaviour
             {
                 if (terminer != null)
                 {
-                    finishedday = true;
                     terminer.Play();
+                    finishedday = true;
+                    
                 }
             }
         }

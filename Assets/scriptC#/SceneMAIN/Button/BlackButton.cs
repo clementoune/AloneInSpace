@@ -7,6 +7,7 @@ public class BlackButton : MonoBehaviour
     public EquiperCasqueVR casque; // Référence au casque
     public AudioSource audioSource; // Référence au son à jouer
     public RedButton redButton; // Référence au bouton rouge
+    public AudioSource VoixTrigger; // Référence au son de la voix à jouer
 
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
     private Vector3 initialPosition; // Position de base du bouton
@@ -15,7 +16,6 @@ public class BlackButton : MonoBehaviour
     {
         grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
         initialPosition = transform.localPosition;
-        setGrabbable(false);  
         if (grabInteractable != null)
         {
             grabInteractable.selectEntered.AddListener(OnButtonPressed);
@@ -29,7 +29,11 @@ public class BlackButton : MonoBehaviour
 
     private void OnButtonPressed(SelectEnterEventArgs args)
     {
-        Debug.Log("🟢 Bouton Pressé");
+        if (redButton != null && !redButton.isPressed)
+        {
+            VoixTrigger.Play();
+            return;
+        }
 
         // Vérifier si le casque est déjà équipé avant de procéder
         if (!casque.AEteEquipe)
@@ -80,18 +84,5 @@ public class BlackButton : MonoBehaviour
         yield return new WaitForSeconds(0.2f); // Durée de l'appui
         // Revenir à la position initiale
         transform.localPosition = initialPosition;
-    }
-
-    public void setGrabbable(bool grabbable)
-    {
-        if (grabInteractable != null)
-        {
-            grabInteractable.enabled = grabbable;  // Assurez-vous que grabbable est un booléen
-            Debug.Log(grabbable ? "🔵 Le casque est maintenant attrapable." : "🔴 Le casque n'est plus attrapable.");
-        }
-        else
-        {
-            Debug.LogError("⚠️ XRGrabInteractable manquant sur l'objet !");
-        }
     }
 }

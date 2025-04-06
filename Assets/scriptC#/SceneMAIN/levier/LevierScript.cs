@@ -32,6 +32,7 @@ public class LevierScript : MonoBehaviour
 
     private void Update()
     {
+        
         // Si le vaisseau doit bouger, on le déplace
         if (isMoving)
         {
@@ -44,7 +45,6 @@ public class LevierScript : MonoBehaviour
         if(redButton != null && !redButton.isPressed)
         {
             VoixTrigger.Play();
-            Debug.Log("🔴 Le bouton rouge n'est pas encore pressé ! VoixTrigger launch");
             return;
         }
         Debug.Log("🟢 Levier Saisi, le vaisseau démarre...");
