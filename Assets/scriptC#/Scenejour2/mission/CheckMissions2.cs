@@ -7,12 +7,12 @@ public class CheckMissions2 : MonoBehaviour
     public Toggle monCheckMark1;
     public Toggle monCheckMark2;
     public Toggle monCheckMark3;
-    public EquiperCasqueVR2 scriptCasqueVR; 
-    public LevierScript2 scriptLevier;
+    public EquiperCasqueVR2 scriptCasqueVR;
+    public GreenButton2 scriptButtonGrenne;
     public AudioSource terminer;
     public VRCanvasController2 cycleJourNuit;
 
-    public static bool finishedday=false;
+    public static bool finishedday = false;
     public static bool dejaValider = false;
 
     public TextMeshProUGUI texteCheckMark1;
@@ -25,13 +25,13 @@ public class CheckMissions2 : MonoBehaviour
 
     void Start()
     {
-            missionsJour[0].text = "Equiper le casque";
-            missionsJour[1].text = "Reposer le casque";
-            missionsJour[2].text = "Demarrer le vaisseau";
-            texteCheckMark1.text = missionsJour[0].text;
-            texteCheckMark2.text = missionsJour[1].text;
-            texteCheckMark3.text = missionsJour[2].text;
-            Debug.Log("Jour 1 : " + missionsJour[0].text + ", " + missionsJour[1].text + ", " + missionsJour[2].text);
+        missionsJour[0].text = "Eteindre l'alarme";
+        missionsJour[1].text = "Tirer sur des asteroides pour les detruire";
+        missionsJour[2].text = "Demarrer le vaisseau";
+        texteCheckMark1.text = missionsJour[0].text;
+        texteCheckMark2.text = missionsJour[1].text;
+        texteCheckMark3.text = missionsJour[2].text;
+        Debug.Log("Jour 1 : " + missionsJour[0].text + ", " + missionsJour[1].text + ", " + missionsJour[2].text);
 
         // Initialisation des checkmarks à l'état désactivé
         if (monCheckMark1 != null)
@@ -50,7 +50,7 @@ public class CheckMissions2 : MonoBehaviour
 
     void Update()
     {
-        if(!dejaValider)ValiderMissions();
+        if (!dejaValider) ValiderMissions();
     }
     //a modif
     // Méthode pour valider les missions lorsque le bouton est cliqué
@@ -76,23 +76,23 @@ public class CheckMissions2 : MonoBehaviour
                 }
             }
 
-            if (scriptLevier.estActiver)
+            if (scriptButtonGrenne.estActiver)
             {
-                Debug.Log("Le vaisseau a démarré !");
+                Debug.Log("L'alarme est eteinte'!");
                 if (monCheckMark3 != null)
                 {
                     monCheckMark3.isOn = true;
                 }
             }
-            Debug.Log("état des missions : " + scriptLevier.estActiver + ", " + scriptCasqueVR.AEteEquipe + ", " + scriptCasqueVR.AEteRepose);
-            if (scriptLevier.estActiver && scriptCasqueVR.AEteEquipe && scriptCasqueVR.AEteRepose)
+            Debug.Log("état des missions : " + scriptButtonGrenne.estActiver + ", " + scriptCasqueVR.AEteEquipe + ", " + scriptCasqueVR.AEteRepose);
+            if (scriptButtonGrenne.estActiver && scriptCasqueVR.AEteEquipe && scriptCasqueVR.AEteRepose)
             {
                 if (terminer != null)
                 {
                     terminer.Play();
                     dejaValider = true;
                     finishedday = true;
-                    
+
                 }
             }
         }

@@ -10,6 +10,10 @@ public class GreenButton2 : MonoBehaviour
 
     public AlarmSystem alarmSystem; // Référence au script de l'alarme
 
+    public CheckMissions2 scriptCheckMissions; // Référence au script CheckMissions
+    private bool alarme = false;  // Détermine si le vaisseau doit bouger ou non
+    public bool estActiver { get { return alarme; } private set { alarme = value; } }
+
     private void Start()
     {
         grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
@@ -26,6 +30,7 @@ public class GreenButton2 : MonoBehaviour
         }
 
     }
+
 
     private void OnButtonPressed(SelectEnterEventArgs args)
     {
@@ -49,6 +54,12 @@ public class GreenButton2 : MonoBehaviour
 
         // ▶️ Animation d'appui physique du bouton
         StartCoroutine(AnimateButtonPress());
+
+        // Commencer à déplacer le vaisseau
+        alarme = true;
+
+        Debug.Log("etat de l'alarme : " + estActiver);
+        scriptCheckMissions.ValiderMissions();
     }
 
     private IEnumerator AnimateButtonPress()
