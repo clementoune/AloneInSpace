@@ -38,6 +38,9 @@ public class SceneChanged4 : MonoBehaviour
 
         // 📝 Afficher texte TextMeshPro
         yield return StartCoroutine(FadeInText());
+
+        // 🚪 Quitter le jeu après l'animation
+        Quit();
     }
 
     IEnumerator FadeIn()
@@ -103,5 +106,17 @@ public class SceneChanged4 : MonoBehaviour
         }
 
         messageText.alpha = 1f;
+    }
+
+    // Fonction pour quitter le jeu
+    public void Quit()
+    {
+        // Arrête le jeu (ne fonctionne pas en mode éditeur Unity)
+        Application.Quit();
+
+        // Logique de fermeture si tu es en mode éditeur
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 }

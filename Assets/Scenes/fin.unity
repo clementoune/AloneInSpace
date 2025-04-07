@@ -906,9 +906,9 @@ MonoBehaviour:
   fadeDuration: 2
   blinkSpeed: 0.2
   minAlphaAfterFade: 0.2
-  waitBeforeBlackout: 5
+  waitBeforeBlackout: 3
   messageText: {fileID: 41031894}
-  message: "Bienvenue dans ton r\xEAve..."
+  message: THE END
   textFadeInDuration: 2
 --- !u!1 &1114053366
 GameObject:
