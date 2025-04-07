@@ -12,7 +12,7 @@ public class SceneChanged4 : MonoBehaviour
     public float waitBeforeBlackout = 5f;
 
     public TextMeshProUGUI messageText;
-    public string message = "Bienvenue dans ton rêve...";
+    public string message = "THE END";
     public float textFadeInDuration = 2f;
 
     void Start()
