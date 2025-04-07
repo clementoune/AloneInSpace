@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 41031895}
   - component: {fileID: 41031894}
   m_Layer: 5
-  m_Name: Jours
+  m_Name: THE END
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -907,7 +907,7 @@ MonoBehaviour:
   blinkSpeed: 0.2
   minAlphaAfterFade: 0.2
   waitBeforeBlackout: 5
-  messageText: {fileID: 0}
+  messageText: {fileID: 41031894}
   message: "Bienvenue dans ton r\xEAve..."
   textFadeInDuration: 2
 --- !u!1 &1114053366
