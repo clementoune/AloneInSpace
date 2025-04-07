@@ -7,6 +7,9 @@ public class BlueButton2 : MonoBehaviour
     public AudioSource soundbutton;
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
     private Vector3 initialPosition; // Position de base du bouton
+    public SpawnZone spawner; // À lier depuis l'inspecteur
+    public LaserShooter laserShooter; // 🎯 Référence à LaserShooter
+
 
     private void Start()
     {
@@ -41,6 +44,23 @@ public class BlueButton2 : MonoBehaviour
 
         // ▶️ Animation d'appui physique du bouton
         StartCoroutine(AnimateButtonPress());
+
+        // Démarrer le spawn
+        if (spawner != null)
+        {
+            spawner.StartSpawning();
+        }
+        else
+        {
+            Debug.LogWarning("❌ Aucun spawner assigné au bouton !");
+        }
+
+        // 🔫 Active le tir pendant 60 sec
+        if (laserShooter != null)
+        {
+            laserShooter.EnableShootingForOneMinute();
+        }
+
     }
 
     private IEnumerator AnimateButtonPress()

@@ -18,6 +18,7 @@ TagManager:
   - socketJaune
   - ZoneDeDeplacementExterieur
   - ZoneDeDeplacementInterieur
+  - Asteroid
   layers:
   - Default
   - TransparentFX

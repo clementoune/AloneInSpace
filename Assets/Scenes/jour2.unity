@@ -2644,6 +2644,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2e21827768713f14fa5f88921294c961, type: 3}
       insertIndex: -1
       addedObject: {fileID: 684137670}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2e21827768713f14fa5f88921294c961, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1803819071}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2e21827768713f14fa5f88921294c961, type: 3}
       insertIndex: -1
@@ -4664,6 +4667,37 @@ MonoBehaviour:
   redButton: {fileID: 1733491745}
   VoixTrigger: {fileID: 1342505430}
   scriptCheckMissions: {fileID: 1318414769}
+--- !u!1 &809343857
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 809343858}
+  m_Layer: 0
+  m_Name: ShootOrigin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &809343858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809343857}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1877249658}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &820403770
 GameObject:
   m_ObjectHideFlags: 0
@@ -9985,6 +10019,52 @@ Transform:
   - {fileID: 129107691}
   m_Father: {fileID: 2073992743}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1803819070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1803819071}
+  - component: {fileID: 1803819072}
+  m_Layer: 0
+  m_Name: SpawnZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1803819071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803819070}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.74, y: -0.59, z: 32.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 372928006}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1803819072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803819070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8dc109a8542fb4596aad05ff4ad61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroidPrefab: {fileID: 6008062609554561516, guid: 055ea6251f314234f954e584d7c87286, type: 3}
+  size: {x: 15, y: 15, z: 15}
 --- !u!1 &1812620616
 GameObject:
   m_ObjectHideFlags: 0
@@ -10553,6 +10633,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9178654614274383201, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1263019584}
+    - targetCorrespondingSourceObject: {fileID: 9178654614361751010, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 809343858}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7545296495857058878, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
       insertIndex: -1
@@ -10560,12 +10643,52 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7545296495857058878, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1934442096}
+    - targetCorrespondingSourceObject: {fileID: 9178654614361751011, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1877249660}
   m_SourcePrefab: {fileID: 100100000, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
 --- !u!1 &1877249657 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7545296495857058878, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
   m_PrefabInstance: {fileID: 1877249656}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1877249658 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9178654614361751010, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
+  m_PrefabInstance: {fileID: 1877249656}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1877249659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9178654614361751011, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
+  m_PrefabInstance: {fileID: 1877249656}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1877249660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877249659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f70bd044430514399b226465253782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 3507816687603366037, guid: 13e3ae62819607142b16d2aa24a1d3e2, type: 3}
+  shootOrigin: {fileID: 809343858}
+  shootForce: 20
+  shootAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Shoot
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: ced53417-8829-4a8a-a850-007b02532851
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!1 &1892666582
 GameObject:
   m_ObjectHideFlags: 0
@@ -10939,6 +11062,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundbutton: {fileID: 636393138}
+  spawner: {fileID: 0}
+  laserShooter: {fileID: 0}
 --- !u!4 &1934442089 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7545296495857058877, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
