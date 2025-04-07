@@ -10,7 +10,7 @@ public class EquiperCasqueVR2 : MonoBehaviour
     public AudioSource VoixTrigger;
 
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
-    private bool estEquipe = false;
+    public bool estEquipe = false;
 
     private void Start()
     {
@@ -41,7 +41,6 @@ public class EquiperCasqueVR2 : MonoBehaviour
             {
                 sonCasqueEquipe.Play();
             }
-            Debug.Log("etat du casque : " + AEteEquipe);
             }
     }
 
@@ -53,7 +52,6 @@ public class EquiperCasqueVR2 : MonoBehaviour
         {
             Debug.Log("📌 Casque repositionné sur le socle !");
             estEquipe = false;
-            aReposer = true;  // Le casque a été reposé
             transform.SetParent(null);
             transform.position = socleCasque.position;
             transform.rotation = socleCasque.rotation;

@@ -7,8 +7,6 @@ public class RedButton2 : MonoBehaviour
     public AudioSource soundbutton;
     public AudioSource audioSource2;
     public GameObject canvas;
-    public EquiperCasqueVR2 casqueVRSCRIPT;
-    public BlackButton2 blackButton; // Référence au bouton noir
     public bool isPressed = false;
 
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable; // Changed the type

@@ -29,14 +29,8 @@ public class BlackButton2 : MonoBehaviour
 
     private void OnButtonPressed(SelectEnterEventArgs args)
     {
-        if (redButton != null && !redButton.isPressed)
-        {
-            VoixTrigger.Play();
-            return;
-        }
-
         // Vérifier si le casque est déjà équipé avant de procéder
-        if (!casque.AEteEquipe)
+        if (!casque.estEquipe)
         {
             Debug.Log("⚠️ Le casque n'est pas encore équipé !");
             // Optionnellement, jouer un son d'avertissement si défini
