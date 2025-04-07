@@ -3066,8 +3066,8 @@ Transform:
   m_GameObject: {fileID: 640121336}
   serializedVersion: 2
   m_LocalRotation: {x: -1.888036e-11, y: 0.000000007451465, z: -0, w: 1}
-  m_LocalPosition: {x: 0.38599917, y: 0.16898258, z: -0.1810285}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.386, y: 0.169, z: -0.862}
+  m_LocalScale: {x: 1, y: 1, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1801103197}
@@ -4022,8 +4022,8 @@ Transform:
   m_GameObject: {fileID: 775369876}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.242, y: 0.409, z: -0.174}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.242, y: 0.409, z: -0.796}
+  m_LocalScale: {x: 1, y: 1, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1801103197}
@@ -7737,13 +7737,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1436624470}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b6cfaf4ba7989b48aae9fd9ebb4cea9, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c2f84df6e7a3de46a3ac968eac9bc6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   musicClips:
+  - {fileID: 8300000, guid: dffa7e34ee5754842b5172074856b95d, type: 3}
   - {fileID: 8300000, guid: 4334c584c94513b48ac35f471e6b2256, type: 3}
   - {fileID: 8300000, guid: 73185268a6b14284783e7bb2b0fb23c6, type: 3}
-  - {fileID: 8300000, guid: dffa7e34ee5754842b5172074856b95d, type: 3}
   - {fileID: 8300000, guid: a2845124b40044e439fed10540123bf1, type: 3}
 --- !u!1001 &1459607787
 PrefabInstance:
