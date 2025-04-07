@@ -18,6 +18,7 @@ TagManager:
   - socketJaune
   - Asteroid
   - fuse
+  - tape
   layers:
   - Default
   - TransparentFX

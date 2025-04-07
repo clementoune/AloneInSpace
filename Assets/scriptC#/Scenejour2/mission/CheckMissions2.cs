@@ -7,7 +7,7 @@ public class CheckMissions2 : MonoBehaviour
     public Toggle monCheckMark1;
     public Toggle monCheckMark2;
     public Toggle monCheckMark3;
-    public EquiperCasqueVR2 scriptCasqueVR;
+    public MiseEnCommunFuite scriptMiseEnCommunFuite;
     public MiseEnCommun scriptMiseEnCommun;
     public GreenButton2 scriptButtonGrenne;
     public AudioSource terminer;
@@ -26,9 +26,9 @@ public class CheckMissions2 : MonoBehaviour
 
     void Start()
     {
-        missionsJour[0].text = "Eteindre l alarme";
-        missionsJour[1].text = "Tirer sur des asteroides pour les detruire";
-        missionsJour[2].text = "Retrouver les fusibles et les replacer";
+        missionsJour[0].text = "Reparer les fuites de vapeur";
+        missionsJour[1].text = "Retrouver les fusibles et les replacer";
+        missionsJour[2].text = "Eteindre l alarme";
         texteCheckMark1.text = missionsJour[0].text;
         texteCheckMark2.text = missionsJour[1].text;
         texteCheckMark3.text = missionsJour[2].text;
@@ -57,35 +57,50 @@ public class CheckMissions2 : MonoBehaviour
     // Méthode pour valider les missions lorsque le bouton est cliqué
     public void ValiderMissions()
     {
-        if (scriptCasqueVR != null)
+        if (scriptMiseEnCommunFuite != null)
         {
-            if (scriptButtonGrenne.estActiver)
+            if (scriptMiseEnCommunFuite.Check)
             {
-                Debug.Log("L'alarme est eteinte'!");
+                Debug.Log("Le casque a été équipé !// en refonte");
                 if (monCheckMark1 != null)
                 {
                     monCheckMark1.isOn = true;
-                }
-            }
-            if (scriptCasqueVR.AEteEquipe)
-            {
-                Debug.Log("Le casque a été équipé !// en refonte");
-                if (monCheckMark2 != null)
-                {
-                    monCheckMark2.isOn = true;
                 }
             }
 
             if (scriptMiseEnCommun.Check)
             {
                 Debug.Log("Les fusibles ont été positionnés !");
+                if (monCheckMark2 != null)
+                {
+                    monCheckMark2.isOn = true;
+                }
+            }
+            if(scriptButtonGrenne.estActiver)
+            {
+                Debug.Log("L'alarme a été désactivée !");
                 if (monCheckMark3 != null)
                 {
                     monCheckMark3.isOn = true;
                 }
             }
-            Debug.Log("état des missions : " + scriptButtonGrenne.estActiver + ", " + scriptCasqueVR.AEteEquipe + ", " + scriptMiseEnCommun.Check);
-            if (scriptButtonGrenne.estActiver && scriptMiseEnCommun.Check)
+            Debug.Log("état des missions : " + scriptButtonGrenne.estActiver + ", " + scriptButtonGrenne.estActiver + ", " + scriptMiseEnCommun.Check);
+            if (scriptButtonGrenne.estActiver && scriptMiseEnCommun.Check&&scriptButtonGrenne.estActiver)
+            {
+                Debug.Log("Toutes les missions sont validées !");
+                if (monCheckMark1 != null)
+                {
+                    monCheckMark1.isOn = true;
+                }
+                if (monCheckMark2 != null)
+                {
+                    monCheckMark2.isOn = true;
+                }
+                if (monCheckMark3 != null)
+                {
+                    monCheckMark3.isOn = true;
+                }
+            }
             {
                 if (terminer != null)
                 {

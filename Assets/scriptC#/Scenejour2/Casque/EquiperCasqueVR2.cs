@@ -8,15 +8,9 @@ public class EquiperCasqueVR2 : MonoBehaviour
     public AudioSource sonCasqueEquipe; // Son lorsqu'on met le casque
     public RedButton2 redButton; // Référence au script RedButton
     public AudioSource VoixTrigger;
-    public CheckMissions2  scriptCheckMissions; // Référence au script CheckMissions
 
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
     private bool estEquipe = false;
-    private bool aEquiperLecasque = false;
-    private bool aReposer = false;
-
-    public bool AEteEquipe { get { return aEquiperLecasque; } private set { aEquiperLecasque = value; } }
-    public bool AEteRepose { get { return aReposer; } private set { aReposer = value; } }
 
     private void Start()
     {
@@ -35,14 +29,6 @@ public class EquiperCasqueVR2 : MonoBehaviour
 
     private void EquiperCasqueSurTete(SelectExitEventArgs args)
     {
-        if (redButton != null && !redButton.isPressed)
-        {
-            VoixTrigger.Play();
-            RepositionnerCasqueError();
-            Debug.Log("🔊 Voix déclenchée !");
-            return;
-        }
-
         if (!estEquipe)
         {
             Debug.Log("🎧 Casque équipé !");
@@ -51,15 +37,12 @@ public class EquiperCasqueVR2 : MonoBehaviour
             transform.localRotation = Quaternion.identity;
             estEquipe = true;
             grabInteractable.enabled = false; 
-            AEteEquipe = true;
-
             if (sonCasqueEquipe != null)
             {
                 sonCasqueEquipe.Play();
             }
             Debug.Log("etat du casque : " + AEteEquipe);
-            scriptCheckMissions.ValiderMissions();
-        }
+            }
     }
 
     public void RepositionnerCasque()
@@ -76,8 +59,6 @@ public class EquiperCasqueVR2 : MonoBehaviour
             transform.rotation = socleCasque.rotation;
             grabInteractable.enabled = true;  // Réactive le grab interactable
             Debug.Log("🔄 Le casque a été reposé !");
-            scriptCheckMissions.ValiderMissions(); // Appel de la méthode pour valider les missions
-
         }
         else
         {
