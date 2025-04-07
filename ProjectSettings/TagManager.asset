@@ -16,9 +16,8 @@ TagManager:
   - socketVert
   - socketViolet
   - socketJaune
-  - ZoneDeDeplacementExterieur
-  - ZoneDeDeplacementInterieur
   - Asteroid
+  - fuse
   layers:
   - Default
   - TransparentFX
