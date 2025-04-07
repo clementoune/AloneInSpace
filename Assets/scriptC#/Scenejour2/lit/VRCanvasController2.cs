@@ -63,6 +63,6 @@ public class VRCanvasController2 : MonoBehaviour
         numjours++;
         messageText.text = "Jour " + numjours;
         messageText.gameObject.SetActive(true);
-        SceneManager.LoadScene("jour2");
+        SceneManager.LoadScene("fin");
     }
 }

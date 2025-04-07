@@ -99,6 +99,7 @@
     <Compile Include="Assets\UnityTechnologies\ParticlePack\Shared\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\UnityTechnologies\ParticlePack\Shared\Scripts\SimpleCharacterMotor.cs" />
     <Compile Include="Assets\scriptC#\SceneJour1\Button\YellowButton.cs" />
+    <Compile Include="Assets\scriptC#\SceneFin\AudioSequence.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\Callout.cs" />
     <Compile Include="Assets\scriptC#\SceneJour1\musicbox\GrabMusicPlayer.cs" />
     <Compile Include="Assets\scriptC#\SceneJour1\Button\GreenButton.cs" />
@@ -106,6 +107,7 @@
     <Compile Include="Assets\VRTemplateAssets\Scripts\CalloutGazeController.cs" />
     <Compile Include="Assets\scriptC#\Scenejour2\Casque\EquiperCasqueVR2.cs" />
     <Compile Include="Assets\scriptC#\Scenejour2\levier\LevierScript2.cs" />
+    <Compile Include="Assets\scriptC#\SceneFin\Scenechanged4.cs" />
     <Compile Include="Assets\scriptC#\Scenejour2\Cables\GestionDeplacementSpatial.cs" />
     <Compile Include="Assets\scriptC#\SceneJour1\Casque\EquiperCasqueVR.cs" />
     <Compile Include="Assets\scriptC#\SceneJour1\Button\RedButton.cs" />
