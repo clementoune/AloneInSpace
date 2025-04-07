@@ -32,7 +32,7 @@ public class CheckMissions2 : MonoBehaviour
         texteCheckMark1.text = missionsJour[0].text;
         texteCheckMark2.text = missionsJour[1].text;
         texteCheckMark3.text = missionsJour[2].text;
-        Debug.Log("Jour 1 : " + missionsJour[0].text + ", " + missionsJour[1].text + ", " + missionsJour[2].text);
+        Debug.Log("Jour 2 : " + missionsJour[0].text + ", " + missionsJour[1].text + ", " + missionsJour[2].text);
 
         // Initialisation des checkmarks à l'état désactivé
         if (monCheckMark1 != null)
@@ -53,8 +53,7 @@ public class CheckMissions2 : MonoBehaviour
     {
         if (!dejaValider) ValiderMissions();
     }
-    //a modif
-    // Méthode pour valider les missions lorsque le bouton est cliqué
+
     public void ValiderMissions()
     {
         if (scriptMiseEnCommunFuite != null)
@@ -86,21 +85,6 @@ public class CheckMissions2 : MonoBehaviour
             }
             Debug.Log("état des missions : " + scriptButtonGrenne.estActiver + ", " + scriptButtonGrenne.estActiver + ", " + scriptMiseEnCommun.Check);
             if (scriptButtonGrenne.estActiver && scriptMiseEnCommun.Check&&scriptButtonGrenne.estActiver)
-            {
-                Debug.Log("Toutes les missions sont validées !");
-                if (monCheckMark1 != null)
-                {
-                    monCheckMark1.isOn = true;
-                }
-                if (monCheckMark2 != null)
-                {
-                    monCheckMark2.isOn = true;
-                }
-                if (monCheckMark3 != null)
-                {
-                    monCheckMark3.isOn = true;
-                }
-            }
             {
                 if (terminer != null)
                 {

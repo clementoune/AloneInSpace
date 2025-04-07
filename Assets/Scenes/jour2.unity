@@ -1932,6 +1932,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7803821421792269206, guid: ab2303fa743ce524ca4db287fbdef89f, type: 3}
+--- !u!1 &252166380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1269120730060968, guid: 1a365141225c22e49a7bb976869b22a8, type: 3}
+  m_PrefabInstance: {fileID: 1170762418}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &269090990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2108,6 +2113,8 @@ MonoBehaviour:
   isTriggered: 0
   PressurisedSteam: {fileID: 269090992}
   Tape1: {fileID: 933163418}
+  groundFog1: {fileID: 1909022650}
+  groundFog2: {fileID: 2001872412}
   VoixTrigger: {fileID: 1342505430}
   redButton: {fileID: 1733491745}
 --- !u!1 &365723986
@@ -3099,6 +3106,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionFinale: {fileID: 72705555}
+  VoixTrigger: {fileID: 1342505430}
+  redButton: {fileID: 1733491745}
   enPosition: 0
 --- !u!4 &655511153 stripped
 Transform:
@@ -3985,7 +3994,7 @@ MonoBehaviour:
   sonCasqueEquipe: {fileID: 736382208}
   redButton: {fileID: 1733491745}
   VoixTrigger: {fileID: 1342505430}
-  scriptCheckMissions: {fileID: 1318414769}
+  estEquipe: 0
 --- !u!1 &775369876
 GameObject:
   m_ObjectHideFlags: 0
@@ -4053,6 +4062,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionFinale: {fileID: 1305049396}
+  VoixTrigger: {fileID: 1342505430}
+  redButton: {fileID: 1733491745}
   enPosition: 0
 --- !u!1 &809343857
 GameObject:
@@ -5366,6 +5377,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6c9bd5ab5f8f54f43af922f72505b967, type: 3}
   m_PrefabInstance: {fileID: 1045159904}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1050858306 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1269120730060968, guid: 1a365141225c22e49a7bb976869b22a8, type: 3}
+  m_PrefabInstance: {fileID: 880015811}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1140538113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5756,6 +5772,10 @@ MonoBehaviour:
   PressurisedSteam: {fileID: 1140538115}
   steamSound: {fileID: 979498431}
   Tape1: {fileID: 138903933}
+  groundFog1: {fileID: 1258433474}
+  groundFog2: {fileID: 1944805058}
+  groundFog3: {fileID: 1050858306}
+  groundFog4: {fileID: 252166380}
   redButton: {fileID: 1733491745}
   VoixTrigger: {fileID: 1342505430}
 --- !u!1 &1184626145
@@ -6471,6 +6491,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.026000049, y: 0.026000015, z: 0.10999091}
   m_Center: {x: 0.000030517112, y: 0.0000000018626731, z: -0.00006559864}
+--- !u!1 &1258433474 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1269120730060968, guid: 1a365141225c22e49a7bb976869b22a8, type: 3}
+  m_PrefabInstance: {fileID: 893819792}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1263019583
 GameObject:
   m_ObjectHideFlags: 0
@@ -9068,8 +9093,6 @@ MonoBehaviour:
   soundbutton: {fileID: 636393138}
   audioSource2: {fileID: 1812620618}
   canvas: {fileID: 1697044648}
-  casqueVRSCRIPT: {fileID: 736382210}
-  blackButton: {fileID: 2082845086}
   isPressed: 0
 --- !u!1001 &1739520896
 PrefabInstance:
@@ -10451,7 +10474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7545296495857058877, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.023
+      value: -7.619
       objectReference: {fileID: 0}
     - target: {fileID: 7545296495857058877, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10535,9 +10558,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 809343858}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7545296495857058878, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1934442090}
     - targetCorrespondingSourceObject: {fileID: 7545296495857058878, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1934442096}
@@ -10656,6 +10676,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a365141225c22e49a7bb976869b22a8, type: 3}
+--- !u!1 &1909022650 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1269120730060968, guid: 1a365141225c22e49a7bb976869b22a8, type: 3}
+  m_PrefabInstance: {fileID: 1909022649}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1921361412 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e8035a84251273646ab7acab9f54d3d2, type: 3}
@@ -10950,18 +10975,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7545296495857058877, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
   m_PrefabInstance: {fileID: 1877249656}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1934442090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1877249657}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdf9c81b68fc89145b7815185dcd13b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1934442096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11133,6 +11146,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939228445}
   m_CullTransparentMesh: 1
+--- !u!1 &1944805058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1269120730060968, guid: 1a365141225c22e49a7bb976869b22a8, type: 3}
+  m_PrefabInstance: {fileID: 1770398998}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1974459813 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4103333903944158, guid: 1a365141225c22e49a7bb976869b22a8, type: 3}
@@ -11569,6 +11587,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a365141225c22e49a7bb976869b22a8, type: 3}
+--- !u!1 &2001872412 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1269120730060968, guid: 1a365141225c22e49a7bb976869b22a8, type: 3}
+  m_PrefabInstance: {fileID: 2001872411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2002717011
 PrefabInstance:
   m_ObjectHideFlags: 0

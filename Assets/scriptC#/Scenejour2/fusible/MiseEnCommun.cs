@@ -17,7 +17,7 @@ public class MiseEnCommun : MonoBehaviour
     {
         if(positionningFusible2.enPosition && positionningFusible.enPosition)
         {
-            Check = true; // Les deux fusibles sont positionnés
+            this.Check = true; // Les deux fusibles sont positionnés
             if (ElectricalSparks != null)
             {
                 ElectricalSparks.SetActive(false); // Désactiver les étincelles électriques

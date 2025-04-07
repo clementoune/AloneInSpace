@@ -37,25 +37,6 @@ public class RedButton2 : MonoBehaviour
     private void OnButtonPressed(SelectEnterEventArgs args)
     {
         isPressed = true;        
-        if (soundbutton != null)
-        {
-            soundbutton.Play();
-        }
-        else
-        {
-            Debug.LogWarning("🔇 Aucun sondbutton assigné !");
-        }
-
-        // 🔊 Lancer le son si la source audio est définie
-        if (audioSource2 != null)
-        {
-            audioSource2.Play();
-        }
-        else
-        {
-            Debug.LogWarning("🔇 Aucun audioSource2 assigné !");
-        }
-
         // Afficher le canvas
         if (canvas != null)
         {

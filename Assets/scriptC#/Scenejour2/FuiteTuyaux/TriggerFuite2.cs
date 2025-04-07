@@ -6,6 +6,8 @@ public class TriggerFuite2 : MonoBehaviour
     public bool isTriggered = false;
     public GameObject PressurisedSteam;
     public GameObject Tape1;
+    public GameObject groundFog1;
+    public GameObject groundFog2;
     public AudioSource VoixTrigger;
     public RedButton2 redButton; // Référence au script RedButton
 
@@ -15,7 +17,7 @@ public class TriggerFuite2 : MonoBehaviour
         PressurisedSteam.SetActive(true); // Assurez-vous que la fuite de vapeur est activée au départ
     }
 
-    public void onEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (redButton != null && !redButton.isPressed)
         {
@@ -25,6 +27,8 @@ public class TriggerFuite2 : MonoBehaviour
         }
         if (other.CompareTag("tape"))
         {
+            groundFog1.SetActive(false); // Désactiver le brouillard au sol 1
+            groundFog2.SetActive(false); // Désactiver le brouillard au sol 2
             Tape1.SetActive(true); // Désactiver le GameObject "tape"
             steamSound.Stop(); // Arrêter le son de la fuite de vapeur
             PressurisedSteam.SetActive(false); // Désactiver la fuite de vapeur

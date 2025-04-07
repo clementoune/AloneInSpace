@@ -53,11 +53,13 @@ public class LevierScript : MonoBehaviour
         if (soundbutton != null)
         {
             soundbutton.Play();
+            
         }
         else
         {
             Debug.LogWarning("🔇 Aucun soundbutton assigné !");
         }
+        transform.localRotation *= Quaternion.Euler(-40, 0, 0);
 
         // Commencer à déplacer le vaisseau
         isMoving = true;
