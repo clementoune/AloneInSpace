@@ -8,9 +8,7 @@ using System.Collections.Generic;
 
 public class VRCanvasController2 : MonoBehaviour
 {
-    public static int numjours = 1;
     public Image fadeImage;
-    public TextMeshProUGUI messageText;
     public float fadeDuration = 2f;
     public float darkDuration = 3f;
     public AudioSource pasPret;
@@ -32,7 +30,7 @@ public class VRCanvasController2 : MonoBehaviour
             Debug.LogError("L'objet ne possède pas de XRGrabInteractable.");
         }
 
-        messageText.gameObject.SetActive(false);
+ 
     }
 
     void OnGrab(SelectEnterEventArgs args)
@@ -47,7 +45,6 @@ public class VRCanvasController2 : MonoBehaviour
         Debug.Log("✅ La journée est terminée, on peut aller se coucher !");
         audioSource.Play();
         StartCoroutine(FadeToDark());
-        Debug.Log("Nombre de jours : " + numjours);
     }
 
     IEnumerator FadeToDark()
@@ -60,9 +57,7 @@ public class VRCanvasController2 : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        numjours++;
-        messageText.text = "Jour " + numjours;
-        messageText.gameObject.SetActive(true);
+      
         SceneManager.LoadScene("fin");
     }
 }
