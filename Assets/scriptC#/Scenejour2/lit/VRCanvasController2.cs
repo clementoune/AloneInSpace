@@ -37,7 +37,7 @@ public class VRCanvasController2 : MonoBehaviour
 
     void OnGrab(SelectEnterEventArgs args)
     {
-        if (!CheckMissions.finishedday)
+        if (!CheckMissions2.finishedday)
         {
             Debug.Log("🚫 La journée n'est pas encore terminée !");
             pasPret.Play();

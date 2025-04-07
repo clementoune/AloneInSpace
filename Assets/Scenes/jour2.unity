@@ -2720,6 +2720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionFinale: {fileID: 72705555}
+  enPosition: 0
 --- !u!1 &684137669
 GameObject:
   m_ObjectHideFlags: 0
@@ -3658,6 +3659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionFinale: {fileID: 1305049396}
+  enPosition: 0
 --- !u!1 &809343857
 GameObject:
   m_ObjectHideFlags: 0
@@ -8785,6 +8787,10 @@ PrefabInstance:
     - target: {fileID: 9178654614274383201, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 30.115
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178654614274383204, guid: c77fa25e8b7cdd145a3108ffcfc7ba37, type: 3}
+      propertyPath: far clip plane
+      value: 100000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

@@ -69,7 +69,7 @@ public class CheckMissions2 : MonoBehaviour
             }
             if (scriptCasqueVR.AEteEquipe)
             {
-                Debug.Log("Le casque a été équipé !");
+                Debug.Log("Le casque a été équipé !// en refonte");
                 if (monCheckMark2 != null)
                 {
                     monCheckMark2.isOn = true;
@@ -85,7 +85,7 @@ public class CheckMissions2 : MonoBehaviour
                 }
             }
             Debug.Log("état des missions : " + scriptButtonGrenne.estActiver + ", " + scriptCasqueVR.AEteEquipe + ", " + scriptMiseEnCommun.Check);
-            if (scriptButtonGrenne.estActiver && scriptCasqueVR.AEteEquipe && scriptCasqueVR.AEteRepose)
+            if (scriptButtonGrenne.estActiver && scriptMiseEnCommun.Check)
             {
                 if (terminer != null)
                 {
