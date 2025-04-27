@@ -19,6 +19,7 @@ TagManager:
   - Asteroid
   - fuse
   - tape
+  - FiletDeSecurite
   layers:
   - Default
   - TransparentFX

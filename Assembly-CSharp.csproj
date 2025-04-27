@@ -69,6 +69,7 @@
     <Compile Include="Assets\VRTemplateAssets\Scripts\RayAttachModifier.cs" />
     <Compile Include="Assets\scriptC#\Scenejour2\fusible\PositionningFusible.cs" />
     <Compile Include="Assets\scriptC#\SceneDEBUT\portal\ButtonPressVR.cs" />
+    <Compile Include="Assets\scriptC#\Scenejour2\FiletDeSecurite\RespawnOnTouchFilet.cs" />
     <Compile Include="Assets\scriptC#\Scenejour2\FuiteTuyaux\MiseEnCommunFuite.cs" />
     <Compile Include="Assets\scriptC#\Scenejour2\Button\BlueButton2.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\XRPokeFollowAffordanceFill.cs" />
