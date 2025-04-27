@@ -323,7 +323,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1041.5, y: 499.25}
+  m_TargetSize: {x: 833.2, y: 399.4}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -338,10 +338,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -416.6
-    m_HBaseRangeMax: 416.6
-    m_VBaseRangeMin: -199.7
-    m_VBaseRangeMax: 199.7
+    m_HBaseRangeMin: -333.28
+    m_HBaseRangeMax: 333.28
+    m_VBaseRangeMin: -159.76
+    m_VBaseRangeMax: 159.76
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -943,7 +943,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 58.968052, y: 493.6258, z: -791.9053}
+    m_Target: {x: 55.81194, y: 485.51788, z: -782.2723}
     speed: 2
     m_Value: {x: 58.968052, y: 493.6258, z: -791.9053}
   m_RenderMode: 0
@@ -991,7 +991,7 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.008163133, y: 0.9506517, z: 0.025103016, w: 0.3091387}
+    m_Target: {x: -0.5235394, y: -0.25918803, z: 0.17087232, w: -0.79347736}
     speed: 2
     m_Value: {x: -0.008163133, y: 0.95065176, z: 0.025103018, w: 0.30913872}
   m_Size:
@@ -1097,7 +1097,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 335.6}
     m_SelectedIDs: 60d10000
     m_LastClickedID: 53600
-    m_ExpandedIDs: 0000000056c30000
+    m_ExpandedIDs: 00000000a6b90000a8b90000aab90000acb90000aeb90000b0b90000b2b90000b4b90000b6b90000b8b90000bab90000bcb90000beb90000c0b90000c2b90000c4b90000c6b90000c8b90000cab90000ccb90000ceb90000d0b90000d2b90000d4b90000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1126,7 +1126,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000056c30000
+    m_ExpandedIDs: 00000000a6b90000a8b90000aab90000acb90000aeb90000b0b90000b2b90000b4b90000b6b90000b8b90000bab90000bcb90000beb90000c0b90000c2b90000c4b90000c6b90000c8b90000cab90000ccb90000ceb90000d0b90000d2b90000d4b90000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
