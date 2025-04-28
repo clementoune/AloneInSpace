@@ -26,7 +26,7 @@ public class VoiceOverManager : MonoBehaviour
 
         if (audioSource.clip == null)
         {
-            Debug.LogWarning("Aucun clip audio assign� � AudioSource !");
+            Debug.LogWarning("Aucun clip audio assigné à AudioSource !");
             yield break;
         }
 
@@ -47,7 +47,7 @@ public class VoiceOverManager : MonoBehaviour
             yield return new WaitForSeconds(timeBetweenChunks);
         }
 
-        // Attente restante si l'affichage s'est termin� avant la fin du clip
+        // Attente restante si l'affichage s'est terminé avant la fin du clip
         float remainingTime = audioSource.clip.length - (timeBetweenChunks * totalChunks);
         if (remainingTime > 0)
             yield return new WaitForSeconds(remainingTime);
@@ -69,7 +69,7 @@ public class VoiceOverManager : MonoBehaviour
             yield return null;
         }
 
-        // R�initialiser
+        // Réinitialiser
         dialogueText.gameObject.SetActive(false);
         dialogueText.color = new Color(originalColor.r, originalColor.g, originalColor.b, 1f);
     }

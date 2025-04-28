@@ -15,7 +15,7 @@ public class MiseEnCommunFuite : MonoBehaviour
     {
         if(triggerFuite1.isTriggered && triggerFuite2.isTriggered)
         {
-            Check = true; // Les deux fusibles sont positionnés
+            Check = true; // Les deux fuits ont été rebouchées
 
         }
     }

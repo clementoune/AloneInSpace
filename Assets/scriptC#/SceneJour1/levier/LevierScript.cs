@@ -22,7 +22,6 @@ public class LevierScript : MonoBehaviour
         if (grabInteractable != null)
         {
             grabInteractable.selectEntered.AddListener(OnButtonPressed);
-            grabInteractable.hoverEntered.AddListener(OnHoverEntered);
         }
         else
         {
@@ -66,10 +65,5 @@ public class LevierScript : MonoBehaviour
         Debug.Log("etat du vaisseau : " + estActiver);
         scriptCheckMissions.ValiderMissions(); 
 
-    }
-
-    private void OnHoverEntered(HoverEnterEventArgs args)
-    {
-        Debug.Log("🟡 Hover sur le levier !");
     }
 }

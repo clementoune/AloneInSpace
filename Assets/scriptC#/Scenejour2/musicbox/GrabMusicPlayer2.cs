@@ -9,7 +9,7 @@ public class GrabMusicPlayer2 : MonoBehaviour
     void Start()
     {
         audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.volume = 0.5f;
+        audioSource.volume = 0.2f;
         audioSource.loop = false;
     }
 

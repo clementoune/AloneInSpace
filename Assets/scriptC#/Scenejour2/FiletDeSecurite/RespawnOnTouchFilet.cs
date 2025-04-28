@@ -29,7 +29,7 @@ public class RespawnOnTouchFilet : MonoBehaviour
         transform.position = initialPosition;
         transform.rotation = initialRotation;
 
-        // Reset vitesse pour �viter que l'objet continue de bouger
+        // Reset vitesse pour éviter que l'objet continue de bouger
         if (rb != null)
         {
             rb.linearVelocity = Vector3.zero;

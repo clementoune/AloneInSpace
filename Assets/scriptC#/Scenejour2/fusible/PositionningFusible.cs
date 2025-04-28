@@ -7,14 +7,9 @@ public class PositionningFusible : MonoBehaviour
     public RedButton2 redButton; // Référence au script RedButton
 
     public bool enPosition = false; // Variable pour savoir si le fusible est positionné
+
     private void OnTriggerEnter(Collider other)
     {
-       /* if (redButton != null && !redButton.isPressed)
-        {
-            VoixTrigger.Play();
-            Debug.Log("🔊 Voix déclenchée !");
-            return;
-        }*/
         if (other.CompareTag("fuse"))
         {
             // Repositionne le fusible

@@ -19,8 +19,6 @@ public class VRCanvasController : MonoBehaviour
     public List<Light> alarmLights; // 💡 Lumières rouges d'alarme
     public RedButton redButton;
 
-    private Coroutine alarmCoroutine;
-
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable interactable;
 
     void Start()
