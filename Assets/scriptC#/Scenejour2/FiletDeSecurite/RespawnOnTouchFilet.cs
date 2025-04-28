@@ -1,23 +1,27 @@
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
 
 public class RespawnOnTouchFilet : MonoBehaviour
 {
-    private Vector3 initialPosition;
-    private Quaternion initialRotation;
+    public Transform respawnPoint; // Tu peux glisser un empty GameObject ici dans l'inspecteur
+
     private Rigidbody rb;
 
-    void Start()
+    private void Start()
     {
-        // Sauvegarde la position et la rotation de d�part
-        initialPosition = transform.position;
-        initialRotation = transform.rotation;
         rb = GetComponent<Rigidbody>();
+
+        if (respawnPoint == null)
+        {
+            // Si aucun respawnPoint assigné, utiliser la position actuelle
+            respawnPoint = new GameObject("DefaultRespawnPoint").transform;
+            respawnPoint.position = transform.position;
+            respawnPoint.rotation = transform.rotation;
+        }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("FiletDeSecurite"))
+        if (other.CompareTag("FiletDeSecurite"))
         {
             Respawn();
         }
@@ -25,11 +29,11 @@ public class RespawnOnTouchFilet : MonoBehaviour
 
     private void Respawn()
     {
-        // Reset position et rotation
-        transform.position = initialPosition;
-        transform.rotation = initialRotation;
+        // Remet l'objet à sa position de respawn
+        transform.position = respawnPoint.position;
+        transform.rotation = respawnPoint.rotation;
 
-        // Reset vitesse pour éviter que l'objet continue de bouger
+        // Remet les vitesses à zéro
         if (rb != null)
         {
             rb.linearVelocity = Vector3.zero;
