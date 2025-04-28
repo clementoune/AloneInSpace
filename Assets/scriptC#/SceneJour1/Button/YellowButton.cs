@@ -5,30 +5,27 @@ using System.Collections;
 public class YellowButton : MonoBehaviour
 {
     public AudioSource soundbutton;
-    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
+    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable simpleInteractable;
     private Vector3 initialPosition; // Position de base du bouton
 
     private void Start()
     {
-        grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
+        simpleInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable>();
         initialPosition = transform.localPosition;
 
-        if (grabInteractable != null)
+        if (simpleInteractable != null)
         {
-            grabInteractable.selectEntered.AddListener(OnButtonPressed);
-            grabInteractable.hoverEntered.AddListener(OnHoverEntered);
+            simpleInteractable.selectEntered.AddListener(OnButtonPressed);
         }
         else
         {
-            Debug.LogError("⚠️ XRGrabInteractable manquant sur le cube !");
+            Debug.LogError("⚠️ XRSimpleInteractable manquant sur le cube !");
         }
 
     }
 
     private void OnButtonPressed(SelectEnterEventArgs args)
     {
-        Debug.Log("🟢 Bouton Pressé, repositionnement du casque...");
-
         // 🔊 Lancer le son si la source audio est définie
         if (soundbutton != null)
         {
@@ -50,11 +47,5 @@ public class YellowButton : MonoBehaviour
         yield return new WaitForSeconds(0.2f); // Durée de l'appui
         // Revenir à la position initiale
         transform.localPosition = initialPosition;
-    }
-
-    private void OnHoverEntered(HoverEnterEventArgs args)
-    {
-        // Vous pouvez ajouter des effets de survol ici
-        Debug.Log("🟡 Hover sur le bouton !");
     }
 }

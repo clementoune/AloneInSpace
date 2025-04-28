@@ -11,22 +11,21 @@ public class RedButton : MonoBehaviour
     public BlackButton blackButton; // Référence au bouton noir
     public bool isPressed = false;
 
-    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable; // Changed the type
+    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable simpleInteractable;
     private Vector3 initialPosition;
 
     private void Start()
     {
-        grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>(); // Corrected this line
+        simpleInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable>();
         initialPosition = transform.localPosition;
 
-        if (grabInteractable != null)
+        if (simpleInteractable != null)
         {
-            grabInteractable.selectEntered.AddListener(OnButtonPressed);
-            grabInteractable.hoverEntered.AddListener(OnHoverEntered);
+            simpleInteractable.selectEntered.AddListener(OnButtonPressed);
         }
         else
         {
-            Debug.LogError("⚠️ XRGrabInteractable manquant sur le cube !");
+            Debug.LogError("⚠️ XRSimpleInteractable manquant sur le cube !");
         }
 
         // Assurez-vous que le canvas est désactivé au départ
@@ -76,20 +75,14 @@ public class RedButton : MonoBehaviour
     }
     public void setGrabbable(bool grabbable)
     {
-        if (grabInteractable != null)
+        if (simpleInteractable != null)
         {
-            grabInteractable.enabled = grabbable;  // Assurez-vous que grabbable est un booléen
+            simpleInteractable.enabled = grabbable;  // Assurez-vous que grabbable est un booléen
             Debug.Log(grabbable ? "🔵 est maintenant attrapable." : "🔴 Le casque n'est plus attrapable.");
         }
         else
         {
             Debug.LogError("⚠️ XRGrabInteractable manquant sur l'objet !");
         }
-    }
-
-    private void OnHoverEntered(HoverEnterEventArgs args)
-    {
-        // Vous pouvez ajouter des effets de survol ici
-        Debug.Log("🟡 Hover sur le bouton !");
     }
 }

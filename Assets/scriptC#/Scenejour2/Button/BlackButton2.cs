@@ -9,21 +9,20 @@ public class BlackButton2 : MonoBehaviour
     public RedButton2 redButton; // Référence au bouton rouge
     public AudioSource VoixTrigger; // Référence au son de la voix à jouer
 
-    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
+    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable simpleInteractable;
     private Vector3 initialPosition; // Position de base du bouton
 
     private void Start()
     {
-        grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
+        simpleInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable>();
         initialPosition = transform.localPosition;
-        if (grabInteractable != null)
+        if (simpleInteractable != null)
         {
-            grabInteractable.selectEntered.AddListener(OnButtonPressed);
-            grabInteractable.hoverEntered.AddListener(OnHoverEntered);
+            simpleInteractable.selectEntered.AddListener(OnButtonPressed);
         }
         else
         {
-            Debug.LogError("⚠️ XRGrabInteractable manquant sur le cube !");
+            Debug.LogError("⚠️ XRSimpleInteractable manquant sur le cube !");
         }
     }
 
@@ -64,11 +63,6 @@ public class BlackButton2 : MonoBehaviour
         {
             Debug.LogError("❌ Aucun casque assigné dans l'inspecteur !");
         }
-    }
-
-    private void OnHoverEntered(HoverEnterEventArgs args)
-    {
-        Debug.Log("🛑 Le joueur survole le cube.");
     }
 
     private IEnumerator AnimateButtonPress()
